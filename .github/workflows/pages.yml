@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate data files
+        run: |
+          node -e "global.window={};require('./data/people.js');require('./data/history.js');const p=window.SHART_DATA.people;const ids=new Set();for(const x of p){if(ids.has(x.id))throw new Error('duplicate id '+x.id);ids.add(x.id);for(const l of x.places||[])if(typeof l.lat!=='number'||typeof l.lng!=='number')throw new Error('bad coords: '+x.name+' '+l.name)}console.log(p.length+' people OK')"
+      - uses: actions/configure-pages@v5
+      - name: Prepare site
+        run: |
+          mkdir _site
+          cp -r index.html .nojekyll css js lib data images _site/
+      - uses: actions/upload-pages-artifact@v3
+      - id: deployment
+        uses: actions/deploy-pages@v4
