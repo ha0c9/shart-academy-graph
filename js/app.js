@@ -285,9 +285,12 @@
     var arr = markerIndex[p.id] || [];
     var hit = arr.filter(function (o) { return o.place === pl; })[0];
     if (hit) {
-      cluster.zoomToShowLayer(hit.marker, function () {
-        if (openPopup) hit.marker.openPopup();
+      map.once('moveend', function () {
+        cluster.zoomToShowLayer(hit.marker, function () {
+          if (openPopup) hit.marker.openPopup();
+        });
       });
+      map.flyTo(hit.marker.getLatLng(), Math.max(map.getZoom(), pl.approx ? 11 : 15));
     } else if (pl.lat != null) {
       map.flyTo(ll(pl.lat, pl.lng), 14);
     }
@@ -379,7 +382,10 @@
     body.parentNode.scrollTop = 0;
 
     body.querySelectorAll('.place-card').forEach(function (el) {
-      el.onclick = function () { flyToPlace(p, p.places[+el.dataset.place], true); };
+      el.onclick = function () {
+        if (window.innerWidth < 820) closeDetail();
+        flyToPlace(p, p.places[+el.dataset.place], true);
+      };
     });
     body.querySelectorAll('[data-act]').forEach(function (el) {
       el.onclick = function () {

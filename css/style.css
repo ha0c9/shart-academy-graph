@@ -43,14 +43,14 @@ a { color: var(--teacher); }
 .seal {
   flex: none;
   width: 44px; height: 44px;
-  display: grid; place-items: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   background: var(--seal); color: #fff;
   font-family: "STKaiti", "KaiTi", "Kaiti SC", serif;
-  font-size: 17px; letter-spacing: 1px;
+  font-size: 15px; line-height: 1.1;
   border-radius: 6px;
-  writing-mode: vertical-rl;
   box-shadow: inset 0 0 0 3px var(--seal), inset 0 0 0 4px rgba(255,255,255,.6);
 }
+.seal i { font-style: normal; display: block; }
 .brand h1 { margin: 0; font-size: 20px; letter-spacing: 2px; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif; }
 .subtitle { margin: 2px 0 0; font-size: 12px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tabs { display: flex; gap: 4px; }
@@ -80,9 +80,10 @@ main { flex: 1; position: relative; min-height: 0; }
 .sidebar-toggle {
   position: absolute; left: calc(var(--sidebar-w) + 10px); top: 10px; z-index: 600;
   width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--line);
-  background: #fff; box-shadow: var(--shadow); transition: left .25s;
+  background: #fff; font-size: 17px; cursor: pointer; box-shadow: var(--shadow); transition: left .25s;
 }
 .sidebar.collapsed + .sidebar-toggle { left: 10px; }
+#map .leaflet-top.leaflet-left { top: 46px; }
 .search-box { padding: 14px 14px 6px; }
 .search-box input, .table-toolbar input {
   width: 100%; padding: 9px 12px; font-size: 14px;
@@ -172,7 +173,7 @@ main { flex: 1; position: relative; min-height: 0; }
 .detail {
   position: absolute; top: 0; right: 0; bottom: 0; width: var(--detail-w); max-width: 100%;
   background: var(--card); border-left: 1px solid var(--line); box-shadow: var(--shadow);
-  z-index: 700; overflow-y: auto;
+  z-index: 1001; overflow-y: auto;
   transform: translateX(105%); transition: transform .25s;
 }
 .detail.open { transform: none; }
@@ -281,7 +282,9 @@ td .badge { white-space: nowrap; }
   .topbar { flex-direction: column; align-items: stretch; justify-content: center; gap: 6px; padding: 6px 12px; }
   .subtitle { display: none; }
   .tab { padding: 5px 12px; font-size: 14px; }
-  .sidebar { position: absolute; top: 0; bottom: 0; left: 0; box-shadow: var(--shadow); }
+  .sidebar { position: absolute; top: 0; bottom: 0; left: 0; box-shadow: var(--shadow); z-index: 1001; }
+  .sidebar-toggle { z-index: 1002; }
+  #view-map:has(.detail.open) .sidebar-toggle { display: none; }
   .detail { width: 100%; }
   .legend { display: none; }
   #view-table { padding: 10px; }
