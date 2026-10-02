@@ -383,7 +383,7 @@
 
     body.querySelectorAll('.place-card').forEach(function (el) {
       el.onclick = function () {
-        if (window.innerWidth < 820) closeDetail();
+        if (isMobile()) closeDetail();
         flyToPlace(p, p.places[+el.dataset.place], true);
       };
     });
@@ -409,28 +409,36 @@
     }
   }
 
-  function openPerson(id, fly) {
+  var mobileMq = window.matchMedia('(max-width: 820px), (max-height: 500px) and (pointer: coarse)');
+  function isMobile() { return mobileMq.matches; }
+
+  function openPerson(id, fly, fromRoute) {
     var p = byId[id];
     if (!p) return;
+    var wasOpen = !!state.current;
     state.current = id;
     switchView('map', true);
     renderDetail(p);
     $('#detail').classList.add('open');
     $('#detail').setAttribute('aria-hidden', 'false');
+    $('#view-map').classList.add('detail-open');
     document.querySelectorAll('.person-item').forEach(function (el) { el.classList.toggle('active', el.dataset.id === id); });
     highlight(id);
     if (fly) fitPerson(p);
-    if (window.innerWidth < 820) $('#sidebar').classList.add('collapsed');
-    setHash('p=' + id);
+    if (isMobile()) $('#sidebar').classList.add('collapsed');
+    // 手机上新开详情时压入一条历史记录，iOS 左滑返回 / 返回键即关闭详情而不是离开页面
+    setHash('p=' + id, !wasOpen && isMobile() && !fromRoute);
   }
 
-  function closeDetail() {
+  function closeDetail(fromRoute) {
+    if (fromRoute !== true && history.state === 'detail') { history.back(); return; }
     state.current = null;
+    $('#view-map').classList.remove('detail-open');
     $('#detail').classList.remove('open');
     $('#detail').setAttribute('aria-hidden', 'true');
     highlight(null);
     document.querySelectorAll('.person-item.active').forEach(function (el) { el.classList.remove('active'); });
-    setHash('');
+    if (fromRoute !== true) setHash('');
   }
 
   // ---------------- 名录表 ----------------
@@ -546,20 +554,31 @@
     if (!silent) setHash(v === 'map' ? '' : 'view=' + v);
   }
   var hashLock = false;
-  function setHash(h) {
+  function setHash(h, push) {
     hashLock = true;
-    history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
+    var url = h ? '#' + h : location.pathname + location.search;
+    if (push) history.pushState('detail', '', url);
+    else history.replaceState(h ? history.state : null, '', url);
     setTimeout(function () { hashLock = false; }, 0);
   }
   function route() {
     if (hashLock) return;
     var h = location.hash.slice(1);
     var m;
-    if ((m = h.match(/^p=(.+)$/))) openPerson(decodeURIComponent(m[1]), true);
-    else if ((m = h.match(/^view=(\w+)$/))) switchView(m[1], true);
+    if ((m = h.match(/^p=(.+)$/))) {
+      var id = decodeURIComponent(m[1]);
+      if (id !== state.current) openPerson(id, true, true);
+      return;
+    }
+    if (state.current) closeDetail(true);
+    switchView((m = h.match(/^view=(table|history|about)$/)) ? m[1] : 'map', true);
   }
 
   function refresh() {
+    var nActive = [state.roles, state.fields, state.placeTypes].reduce(function (s, o) {
+      return s + Object.keys(o).filter(function (k) { return o[k]; }).length;
+    }, 0) + (state.onlyPrimary ? 1 : 0);
+    $('#filter-count').textContent = nActive || '';
     var list = filtered();
     renderList(list);
     renderMarkers(list);
@@ -569,7 +588,8 @@
   // ---------------- 灯箱 ----------------
   function initLightbox() {
     var lb = $('#lightbox');
-    document.addEventListener('click', function (e) {
+    // 委托在 <main> 而非 document 上：iOS Safari 不会为仅在 document 上监听的 div 派发 click
+    $('main').addEventListener('click', function (e) {
       var t = e.target.closest('[data-lb]');
       if (t) {
         $('img', lb).src = t.dataset.lb;
@@ -607,6 +627,11 @@
     $('#only-primary').onchange = function (e) { state.onlyPrimary = e.target.checked; refresh(); };
     $('#sort').onchange = function (e) { state.sort = e.target.value; refresh(); };
     $('#detail-close').onclick = closeDetail;
+    $('#filter-toggle').onclick = function () {
+      var open = $('#sidebar').classList.toggle('filters-open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    $('#search').onkeydown = function (e) { if (e.key === 'Enter') e.target.blur(); };
     $('#sidebar-toggle').onclick = function () {
       $('#sidebar').classList.toggle('collapsed');
       setTimeout(function () { map.invalidateSize(); }, 300);
@@ -623,7 +648,9 @@
     $('#export-csv').onclick = exportCsv;
     $('#export-json').onclick = exportJson;
     window.addEventListener('hashchange', route);
-    if (window.innerWidth < 820) $('#sidebar').classList.add('collapsed');
+    window.addEventListener('popstate', route);
+    map.on('click', function () { if (isMobile()) $('#sidebar').classList.add('collapsed'); });
+    if (isMobile()) $('#sidebar').classList.add('collapsed');
     route();
   }
 
