@@ -1,1 +1,15 @@
-{"curations": []}
+{
+  "curations": [
+    {
+      "slug": "issue-4",
+      "title": "画笔之外",
+      "subtitle": "上海美专的跨界校友：从写生教室到银幕、乐谱、书桌与使馆",
+      "created": "2026-10-03T09:09:38Z",
+      "issue": "4",
+      "model": "deepseek-v4-flash-vision-exp",
+      "request": "### 策展想法\n\n展示上海美专培养的跨界人物——电影、音乐、文学、外交、政治领域的校友，说明美术教育对现代中国各领域的影响。\n\n### 目标观众\n\n大众\n\n### 举办地点 / 场馆\n\n刘海粟美术馆\n\n### 展览规模\n\n_No response_\n\n### 是否需要借展方案\n\n_No response_\n\n### 其他要求\n\n_No response_",
+      "sections": 6,
+      "loans": 10
+    }
+  ]
+}
