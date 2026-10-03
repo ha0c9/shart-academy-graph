@@ -1,0 +1,50 @@
+name: AI 策展请求
+description: 描述你的策展想法，AI 将基于上海美专名人图谱资料生成结构化策展方案（含借展建议）
+title: "[AI策展] "
+labels: ["ai-curation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交后，GitHub Actions 会调用仓库配置的模型生成方案，并在本 Issue 下回帖，同时发布到网站“AI 策展”页（约 2—6 分钟）。
+        只有仓库所有者、成员与协作者的请求会被处理。如需修改，可在本 Issue 下回复以 `/curate` 开头的评论。
+  - type: textarea
+    id: idea
+    attributes:
+      label: 策展想法
+      description: 主题、想突出的观点、希望涵盖的人物或领域等，越具体越好。
+      placeholder: 例如：以上海美专的女性名人为主题策展，突出她们作为女性在美术教育以及在美专学习对中国发展的贡献。
+    validations:
+      required: true
+  - type: input
+    id: audience
+    attributes:
+      label: 目标观众
+      placeholder: 例如：大众观众、高校师生、专业研究者
+  - type: input
+    id: venue
+    attributes:
+      label: 举办地点 / 场馆
+      placeholder: 例如：上海刘海粟美术馆，或“待定”
+  - type: dropdown
+    id: scale
+    attributes:
+      label: 展览规模
+      options:
+        - 小型（单厅，约 50 件以内）
+        - 中型（多厅，约 50—150 件）
+        - 大型（150 件以上 / 巡展）
+        - 线上展 / 数字展
+  - type: dropdown
+    id: loans
+    attributes:
+      label: 是否需要借展方案
+      options:
+        - 需要（含国内外借展）
+        - 仅国内借展
+        - 不需要
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他要求
+      placeholder: 时间、预算、必须包含 / 排除的内容等
