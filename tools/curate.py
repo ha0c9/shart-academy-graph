@@ -264,6 +264,13 @@ SYSTEM_PROMPT = """你是一位资深的中国近现代美术史研究者与展�
 - 给出展陈与空间建议、公共教育活动、筹备时间表、主要风险，以及需要进一步核实的问题清单。
 - 语言为简体中文，专业、准确、可读。
 
+篇幅控制（避免输出被截断）：单元 3—6 个，每单元展品不超过 6 项，借展机构不超过 10 家，其余列表每项一两句话；整份 JSON 控制在约 6000 汉字以内。
+
+JSON 格式要求（必须严格遵守，否则方案无法发布）：
+- 必须是合法 JSON：键和字符串用英文双引号，不加注释，最后一项后不加逗号。
+- 字符串内容里不要出现英文双引号 "；引用、作品名请用中文引号“”或书名号《》。
+- 字符串内不要换行，需要分段时用“；”分隔。
+
 最终输出：只输出一个 JSON 对象（可以放在 ```json 代码块中），不要输出其他文字。结构如下（字段都要有，没有内容用空数组或空字符串）：
 {
   "title": "展览标题",
@@ -323,14 +330,26 @@ class ToolsUnsupported(Exception):
     pass
 
 
-def chat(messages, tools=None, temperature=0.4):
+class CurationOutputError(Exception):
+    def __init__(self, err, raw):
+        super().__init__('模型输出无法解析为 JSON：' + err)
+        self.raw = raw
+
+
+MAX_TOKENS = [int(os.environ.get('AI_MAX_TOKENS') or 16384)]
+JSON_MODE = [True]
+
+
+def chat(messages, tools=None, temperature=0.4, json_mode=False):
     body = {'model': os.environ.get('AI_MODEL_PLANNER') or 'deepseek-chat', 'messages': messages,
-            'temperature': temperature, 'max_tokens': 8192, 'stream': False}
+            'temperature': temperature, 'max_tokens': MAX_TOKENS[0], 'stream': False}
     if tools:
         body['tools'] = tools
         body['tool_choice'] = 'auto'
-    data = json.dumps(body, ensure_ascii=False).encode('utf-8')
+    if json_mode and JSON_MODE[0]:
+        body['response_format'] = {'type': 'json_object'}
     for attempt in range(4):
+        data = json.dumps(body, ensure_ascii=False).encode('utf-8')
         req = urllib.request.Request(endpoint(), data=data, headers={
             'Content-Type': 'application/json', 'Authorization': 'Bearer ' + os.environ['AI_API_KEY'], 'User-Agent': UA})
         try:
@@ -340,6 +359,15 @@ def chat(messages, tools=None, temperature=0.4):
             detail = e.read().decode('utf-8', errors='replace')[:800]
             if tools and e.code in (400, 422) and re.search(r'tool|function', detail, re.I):
                 raise ToolsUnsupported(detail)
+            # 部分代理不接受较大的 max_tokens 或 response_format，自动降级后重试
+            if e.code in (400, 422) and 'response_format' in body and re.search(r'response_format|json_object|json mode', detail, re.I):
+                JSON_MODE[0] = False
+                body.pop('response_format')
+                continue
+            if e.code in (400, 422) and body['max_tokens'] > 8192 and re.search(r'max_tokens|max_completion|token', detail, re.I):
+                MAX_TOKENS[0] = 8192
+                body['max_tokens'] = 8192
+                continue
             if e.code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(10 * (attempt + 1))
                 continue
@@ -351,11 +379,124 @@ def chat(messages, tools=None, temperature=0.4):
             raise RuntimeError('无法连接模型接口：%s' % e)
 
 
+def complete(messages, json_mode=False, temperature=0.4, log=print):
+    """调用模型；若因长度被截断（finish_reason=length），请模型从断点继续并拼接。"""
+    msgs = list(messages)
+    parts = []
+    for _ in range(4):
+        choice = chat(msgs, temperature=temperature, json_mode=json_mode)['choices'][0]
+        part = choice['message'].get('content') or ''
+        parts.append(part)
+        if choice.get('finish_reason') != 'length':
+            break
+        log('输出达到长度上限，请模型继续输出（已 %d 字）' % sum(len(x) for x in parts))
+        msgs += [{'role': 'assistant', 'content': part},
+                 {'role': 'user', 'content': '输出被截断了。请从断开的位置直接接着输出剩余内容，不要重复已输出的部分，不要加任何说明或代码块标记。'}]
+    return ''.join(parts)
+
+
+def _close_truncated(s):
+    """为被截断的 JSON 补齐结尾；若末尾是不完整的键值，就回退到上一个完整元素。"""
+    cur = s
+    for _ in range(60):
+        closed = _close_brackets(cur)
+        try:
+            json.loads(closed, strict=False)
+            return closed
+        except json.JSONDecodeError as e:
+            if not (e.pos >= len(closed) - 8 or e.msg.startswith(('Expecting', 'Unterminated'))):
+                return closed
+        cut = _last_outside_string(cur, ',{[')
+        if cut < 0:
+            return closed
+        cur = cur[:cut + 1] if cur[cut] in '{[' else cur[:cut]
+    return _close_brackets(cur)
+
+
+def _last_outside_string(s, chars):
+    pos, in_str, esc = -1, False, False
+    for i, ch in enumerate(s[:-1] if s.endswith(tuple(chars)) else s):
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == '\\':
+                esc = True
+            elif ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch in chars:
+            pos = i
+    return pos
+
+
+def _close_brackets(s):
+    stack, in_str, esc = [], False, False
+    for ch in s:
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == '\\':
+                esc = True
+            elif ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch in '{[':
+            stack.append('}' if ch == '{' else ']')
+        elif ch in '}]' and stack:
+            stack.pop()
+    if in_str:
+        s += '"'
+    s = re.sub(r'[,:]\s*$', '', s.rstrip())
+    s = re.sub(r',\s*"[^"]*"\s*$', '', s)
+    return s + ''.join(reversed(stack))
+
+
+def loads_loose(cand):
+    """宽松解析：修复字符串内未转义的英文引号、缺失或多余的逗号、截断的结尾。"""
+    s = re.sub(r',(\s*[}\]])', r'\1', cand)
+    for _ in range(400):
+        try:
+            return json.loads(s, strict=False)
+        except json.JSONDecodeError as e:
+            pos = e.pos
+            if pos >= len(s.rstrip()) or e.msg.startswith('Unterminated string'):
+                fixed = _close_truncated(s)
+                if fixed == s:
+                    raise
+                s = fixed
+                continue
+            j = pos - 1
+            while j >= 0 and s[j] in ' \t\r\n':
+                j -= 1
+            if j < 0:
+                raise
+            nxt = s[pos]
+            gap = s[j + 1:pos]
+            if e.msg.startswith('Expecting') and 'delimiter' in e.msg and s[j] in '"}]0123456789el' and nxt in '"{[' and '\n' in gap:
+                s = s[:j + 1] + ',' + s[j + 1:]
+            elif s[j] == '"' and j > 0 and s[j - 1] != '\\':
+                s = s[:j] + '\\"' + s[j + 1:]
+            elif e.msg.startswith('Expecting property name') and s[j] == ',':
+                s = s[:j] + s[j + 1:]
+            else:
+                raise
+    raise ValueError('JSON 修复次数过多')
+
+
 def extract_json(text):
     text = (text or '').strip()
     m = re.search(r'```(?:json)?\s*(\{.*\})\s*```', text, re.S)
-    cand = m.group(1) if m else text[text.find('{'):text.rfind('}') + 1]
-    return json.loads(cand)
+    if m:
+        cand = m.group(1)
+    else:
+        cand = text[text.find('{'):] if '{' in text else text
+        cand = re.sub(r'\s*```\s*$', '', cand)
+    try:
+        return json.loads(cand)
+    except json.JSONDecodeError:
+        return loads_loose(cand)
 
 
 def preselect_context(request, n=30):
@@ -390,10 +531,16 @@ def generate(request, title='', feedback='', previous=None, log=print):
             log('模型不支持工具调用，改为直接附资料模式：%s' % str(e)[:200])
             use_tools = False
             break
-        msg = resp['choices'][0]['message']
+        choice = resp['choices'][0]
+        msg = choice['message']
         calls = msg.get('tool_calls') or []
         if not calls:
             final_text = msg.get('content') or ''
+            if choice.get('finish_reason') == 'length':
+                log('输出达到长度上限，请模型继续输出（已 %d 字）' % len(final_text))
+                final_text += complete(messages + [
+                    {'role': 'assistant', 'content': final_text},
+                    {'role': 'user', 'content': '输出被截断了。请从断开的位置直接接着输出剩余内容，不要重复已输出的部分，不要加任何说明或代码块标记。'}], log=log)
             break
         rounds += 1
         # DeepSeek 推理模型不接受回传 reasoning_content，只保留 content 与 tool_calls
@@ -414,16 +561,26 @@ def generate(request, title='', feedback='', previous=None, log=print):
         messages = [{'role': 'system', 'content': SYSTEM_PROMPT},
                     {'role': 'user', 'content': build_user_prompt(request, title, feedback, previous) +
                      '\n\n【候选人物完整资料】\n' + preselect_context(request + ' ' + (feedback or ''))}]
-        final_text = chat(messages)['choices'][0]['message'].get('content') or ''
-    try:
-        plan = extract_json(final_text)
-    except Exception:
-        log('JSON 解析失败，请求模型修正格式')
-        messages.append({'role': 'assistant', 'content': final_text})
-        messages.append({'role': 'user', 'content': '上面的输出不是合法 JSON。请只输出符合要求结构的 JSON 对象。'})
-        final_text = chat(messages, temperature=0.1)['choices'][0]['message'].get('content') or ''
-        plan = extract_json(final_text)
-    return plan, trace
+        final_text = complete(messages, json_mode=True, log=log)
+    raw = [final_text]
+    for attempt in range(3):
+        try:
+            plan = extract_json(final_text)
+            if not isinstance(plan, dict) or not plan.get('sections'):
+                raise ValueError('输出不是包含 sections 的 JSON 对象')
+            return plan, trace
+        except (ValueError, json.JSONDecodeError) as e:
+            err = str(e)
+            if attempt == 2:
+                break
+            log('JSON 解析失败（%s），请求模型重新输出（第 %d 次）' % (err[:120], attempt + 1))
+            messages = messages[:2] + [
+                {'role': 'assistant', 'content': final_text[:30000]},
+                {'role': 'user', 'content': '上面的输出不是合法 JSON，解析错误：%s。请重新输出完整方案：只输出一个合法 JSON 对象，'
+                 '字符串内不要使用英文双引号（改用“”或《》），不要换行，控制篇幅（单元不超过 5 个、每单元展品不超过 5 项），确保结尾完整闭合。' % err[:200]}]
+            final_text = complete(messages, json_mode=True, temperature=0.1, log=log)
+            raw.append(final_text)
+    raise CurationOutputError(err, raw)
 
 # ---------------------------------------------------------------- 后处理
 
@@ -468,6 +625,9 @@ def postprocess(plan):
     plan.setdefault('title', '未命名策展方案')
     for k in ('key_messages', 'sections', 'loan_plan', 'public_programs', 'timeline', 'risks', 'data_gaps', 'references'):
         plan[k] = as_list(plan.get(k))
+    plan['sections'] = [x for x in plan['sections'] if isinstance(x, dict) and x.get('title')]
+    plan['loan_plan'] = [x for x in plan['loan_plan'] if isinstance(x, dict) and x.get('lender')]
+    plan['timeline'] = [x for x in plan['timeline'] if isinstance(x, dict) and x.get('phase')]
     unknown = set()
     for s in plan['sections']:
         s['people'] = [i for i in as_list(s.get('people')) if isinstance(i, str)]
@@ -475,14 +635,14 @@ def postprocess(plan):
             if i not in BY_ID:
                 unknown.add(i)
         s['people'] = [i for i in s['people'] if i in BY_ID]
-        for ex in as_list(s.get('exhibits')):
+        s['exhibits'] = [ex for ex in as_list(s.get('exhibits')) if isinstance(ex, dict) and ex.get('item')]
+        for ex in s['exhibits']:
             pid = ex.get('person_id') or ''
             if pid and pid not in BY_ID:
                 unknown.add(pid)
                 ex['person_id'] = ''
             elif pid and not ex.get('person_name'):
                 ex['person_name'] = BY_ID[pid]['name']
-        s['exhibits'] = as_list(s.get('exhibits'))
     for ln in plan['loan_plan']:
         ln['person_ids'] = [i for i in as_list(ln.get('person_ids')) if i in BY_ID]
         ln['items'] = as_list(ln.get('items'))
@@ -571,6 +731,10 @@ def slugify(issue, title):
     return datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).strftime('%Y%m%d-%H%M%S')
 
 
+def write_error(out_dir, text):
+    open(os.path.join(out_dir, '.last-error.md'), 'w', encoding='utf-8').write(text)
+
+
 def main():
     for k in ('AI_API_KEY',):
         if not os.environ.get(k):
@@ -590,7 +754,18 @@ def main():
         previous = json.load(open(prev_path, encoding='utf-8')).get('plan')
 
     print('模型：%s  接口：%s' % (os.environ.get('AI_MODEL_PLANNER') or 'deepseek-chat', endpoint()))
-    plan, trace = generate(request, title, feedback, previous)
+    try:
+        plan, trace = generate(request, title, feedback, previous)
+    except CurationOutputError as e:
+        with open(os.path.join(out_dir, '.last-raw.txt'), 'w', encoding='utf-8') as f:
+            f.write(('\n\n' + '=' * 30 + '\n\n').join(e.raw))
+        write_error(out_dir, '模型调用成功，但连续 3 次输出的方案都不是合法 JSON（最后的错误：`%s`）。'
+                    '原始输出已作为运行产物（Artifacts）上传，可在运行日志页下载查看。可直接回复 `/curate` 重试；'
+                    '若反复出现，可换用输出更稳定的模型，或在 Variables 中设置 `AI_MAX_TOKENS`（如 8192）。' % str(e)[:200])
+        raise
+    except RuntimeError as e:
+        write_error(out_dir, '调用模型接口失败：`%s`。请检查 Secret `AI_API_KEY`、Variables `AI_BASE_URL` / `AI_MODEL_PLANNER` 与接口额度。' % str(e)[:300])
+        raise
     plan = postprocess(plan)
     created = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).replace(microsecond=0).isoformat() + 'Z'
     meta = {'slug': slug, 'created': created, 'model': os.environ.get('AI_MODEL_PLANNER') or 'deepseek-chat',
