@@ -1,0 +1,108 @@
+name: AI 策展
+
+# 触发方式：
+# 1. 网站“AI 策展”页提交 → 新建带 ai-curation 标签（或标题以 [AI策展] 开头）的 Issue
+# 2. 在该 Issue 下回复以 /curate 开头的评论 → 按修改意见修订方案
+# 3. Actions 页面手动运行（workflow_dispatch）
+# 仅仓库所有者、成员与协作者的请求会调用模型，避免他人消耗 API 额度。
+
+on:
+  issues:
+    types: [opened, labeled]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      request:
+        description: 策展想法 / 需求
+        required: true
+      title:
+        description: 标题（可选）
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: curation-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  curate:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+        (contains(github.event.issue.labels.*.name, 'ai-curation') || startsWith(github.event.issue.title, '[AI策展]')) &&
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)) ||
+      (github.event_name == 'issue_comment' && !github.event.issue.pull_request &&
+        startsWith(github.event.comment.body, '/curate') &&
+        (contains(github.event.issue.labels.*.name, 'ai-curation') || startsWith(github.event.issue.title, '[AI策展]')) &&
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 准备
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          gh label create ai-curation --color A3271F --description "AI 策展请求" 2>/dev/null || true
+          gh issue edit "$ISSUE_NUMBER" --add-label ai-curation || true
+          gh issue comment "$ISSUE_NUMBER" --body "AI 策展已开始生成，通常需要 2—6 分钟。[查看运行日志](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+
+      - name: 生成策展方案
+        id: gen
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL_PLANNER: ${{ vars.AI_MODEL_PLANNER }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          EVENT_NAME: ${{ github.event_name }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          INPUT_REQUEST: ${{ github.event.inputs.request }}
+          INPUT_TITLE: ${{ github.event.inputs.title }}
+        run: |
+          if [ -z "$SITE_URL" ]; then
+            owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
+            export SITE_URL="https://$(echo "$owner" | tr 'A-Z' 'a-z').github.io/$repo"
+          fi
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            export CURATION_REQUEST="$INPUT_REQUEST" CURATION_TITLE="$INPUT_TITLE"
+          else
+            export CURATION_REQUEST="$ISSUE_BODY" CURATION_ISSUE="$ISSUE_NUMBER"
+            export CURATION_TITLE="$(printf '%s' "$ISSUE_TITLE" | sed 's/^\[AI策展\][[:space:]]*//')"
+            if [ "$EVENT_NAME" = "issue_comment" ]; then
+              export CURATION_FEEDBACK="$(printf '%s' "$COMMENT_BODY" | sed '1s#^/curate[[:space:]]*##')"
+            fi
+          fi
+          python3 tools/curate.py
+
+      - name: 提交方案
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+          git add curations/*.json curations/*.md
+          git commit -m "AI 策展：${{ steps.gen.outputs.slug }}" || exit 0
+          for i in 1 2 3 4; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep $((i * 5))
+          done
+          gh workflow run pages.yml --ref main
+
+      - name: 回帖
+        if: github.event_name != 'workflow_dispatch'
+        run: gh issue comment "$ISSUE_NUMBER" --body-file curations/.last-comment.md
+
+      - name: 失败通知
+        if: failure() && github.event_name != 'workflow_dispatch'
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "AI 策展生成失败，请查看[运行日志](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})。常见原因：未配置 Secret \`AI_API_KEY\` 或 Variables \`AI_BASE_URL\` / \`AI_MODEL_PLANNER\`，或模型接口额度不足。修正后回复 \`/curate\` 即可重试。"

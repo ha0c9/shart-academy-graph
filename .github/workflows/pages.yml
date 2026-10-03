@@ -29,7 +29,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir _site
-          cp -r index.html manifest.webmanifest .nojekyll css js lib data images _site/
+          cp -r index.html manifest.webmanifest llms.txt .nojekyll css js lib data images archive curations _site/
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
         uses: actions/deploy-pages@v4

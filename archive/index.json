@@ -1,0 +1,1648 @@
+{
+ "updated": "2026-10-03",
+ "count": 109,
+ "people": [
+  {
+   "id": "liu-haisu",
+   "name": "刘海粟",
+   "life": "1896—1994",
+   "role": "创办人/校长",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画",
+    "书法篆刻",
+    "美术教育"
+   ],
+   "relation": "创办人，长期任校长（1915—1952）",
+   "status": "已核实",
+   "markdown": "archive/people/liu-haisu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%88%98%E6%B5%B7%E7%B2%9F"
+  },
+  {
+   "id": "wu-shiguang",
+   "name": "乌始光",
+   "life": "1885—？",
+   "role": "创办人/校长",
+   "gender": "",
+   "fields": [
+    "美术教育",
+    "工艺设计"
+   ],
+   "relation": "创办人之一，首任院长并出资办学",
+   "status": "部分核实",
+   "markdown": "archive/people/wu-shiguang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%83%8F%E5%A7%8B%E5%85%89"
+  },
+  {
+   "id": "zhang-yuguang",
+   "name": "张聿光",
+   "life": "1885—1968",
+   "role": "创办人/校长",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画",
+    "漫画连环画"
+   ],
+   "relation": "创办人之一，首任校长（—1919）",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-yuguang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%B5%E8%81%BF%E5%85%89"
+  },
+  {
+   "id": "xu-langxi",
+   "name": "徐朗西",
+   "life": "1885—1961",
+   "role": "创办人/校长",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "曾任校长（据 1929 年同学录）",
+   "status": "部分核实",
+   "markdown": "archive/people/xu-langxi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BE%90%E6%9C%97%E8%A5%BF"
+  },
+  {
+   "id": "pan-tianshou",
+   "name": "潘天寿",
+   "life": "1897—1971",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻",
+    "美术教育",
+    "美术史论"
+   ],
+   "relation": "1923 年起任中国画、画史教师",
+   "status": "已核实",
+   "markdown": "archive/people/pan-tianshou.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%BD%98%E5%A4%A9%E5%AF%BF"
+  },
+  {
+   "id": "huang-binhong",
+   "name": "黄宾虹",
+   "life": "1865—1955",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术史论",
+    "书法篆刻"
+   ],
+   "relation": "曾任教（中国画）",
+   "status": "部分核实",
+   "markdown": "archive/people/huang-binhong.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%84%E5%AE%BE%E8%99%B9"
+  },
+  {
+   "id": "fu-lei",
+   "name": "傅雷",
+   "life": "1908—1966",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "美术史论",
+    "文学翻译"
+   ],
+   "relation": "1931 年起任办公室主任，讲授美术史",
+   "status": "已核实",
+   "markdown": "archive/people/fu-lei.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%82%85%E9%9B%B7"
+  },
+  {
+   "id": "lv-fengzi",
+   "name": "吕凤子",
+   "life": "1886—1959",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "教授兼教务主任",
+   "status": "已核实",
+   "markdown": "archive/people/lv-fengzi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%90%95%E5%87%A4%E5%AD%90"
+  },
+  {
+   "id": "chen-zhifo",
+   "name": "陈之佛",
+   "life": "1896—1962",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "工艺设计",
+    "美术教育"
+   ],
+   "relation": "1920 年代任教授（图案）",
+   "status": "已核实",
+   "markdown": "archive/people/chen-zhifo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%88%E4%B9%8B%E4%BD%9B"
+  },
+  {
+   "id": "pang-xunqin",
+   "name": "庞薰琹",
+   "life": "1906—1985",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "油画",
+    "工艺设计",
+    "美术教育"
+   ],
+   "relation": "1932 年起任教",
+   "status": "已核实",
+   "markdown": "archive/people/pang-xunqin.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BA%9E%E8%96%B0%E7%90%B9"
+  },
+  {
+   "id": "jiang-zhaohe",
+   "name": "蒋兆和",
+   "life": "1904—1986",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1930—1932 年任素描教授",
+   "status": "已核实",
+   "markdown": "archive/people/jiang-zhaohe.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%94%A3%E5%85%86%E5%92%8C"
+  },
+  {
+   "id": "guan-liang",
+   "name": "关良",
+   "life": "1900—1986",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1923 年起任教（西画）",
+   "status": "已核实",
+   "markdown": "archive/people/guan-liang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%85%B3%E8%89%AF"
+  },
+  {
+   "id": "zhang-chongren",
+   "name": "张充仁",
+   "life": "1907—1998",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "雕塑",
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1949 年后任教（雕塑）",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-chongren.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%A0%E5%85%85%E4%BB%81"
+  },
+  {
+   "id": "wang-baiyuan",
+   "name": "王白渊",
+   "life": "1902—1965",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "工艺设计",
+    "文学翻译",
+    "美术史论"
+   ],
+   "relation": "1930 年代任图案系教师",
+   "status": "已核实",
+   "markdown": "archive/people/wang-baiyuan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E7%99%BD%E6%B7%B5"
+  },
+  {
+   "id": "jiang-danshu",
+   "name": "姜丹书",
+   "life": "1885—1962",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "美术教育",
+    "美术史论",
+    "国画"
+   ],
+   "relation": "1925 年起任艺术教育系主任",
+   "status": "已核实",
+   "markdown": "archive/people/jiang-danshu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%A7%9C%E4%B8%B9%E4%B9%A6"
+  },
+  {
+   "id": "wang-yachen",
+   "name": "汪亚尘",
+   "life": "1894—1983",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1921 年起任西画教授、教务主任",
+   "status": "已核实",
+   "markdown": "archive/people/wang-yachen.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B1%AA%E4%BA%9E%E5%A1%B5"
+  },
+  {
+   "id": "lv-cheng",
+   "name": "吕澂",
+   "life": "1896—1989",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "美术史论"
+   ],
+   "relation": "1916 年任教务长",
+   "status": "已核实",
+   "markdown": "archive/people/lv-cheng.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%91%82%E6%BE%82"
+  },
+  {
+   "id": "jiang-xiaojian",
+   "name": "江小鹣",
+   "life": "1894—1939",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "雕塑",
+    "油画",
+    "工艺设计"
+   ],
+   "relation": "1917 年任教务主任，1926 年任教务长",
+   "status": "已核实",
+   "markdown": "archive/people/jiang-xiaojian.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B1%9F%E5%B0%8F%E9%B9%A3"
+  },
+  {
+   "id": "zhang-shanzi",
+   "name": "张善孖",
+   "life": "1882—1940",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画"
+   ],
+   "relation": "曾任教（国画）",
+   "status": "部分核实",
+   "markdown": "archive/people/zhang-shanzi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%B5%E5%96%84%E5%AD%96"
+  },
+  {
+   "id": "fang-jiekan",
+   "name": "方介堪",
+   "life": "1901—1987",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "书法篆刻"
+   ],
+   "relation": "篆刻教师",
+   "status": "已核实",
+   "markdown": "archive/people/fang-jiekan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%96%B9%E4%BB%8B%E5%A0%AA"
+  },
+  {
+   "id": "li-jinfa",
+   "name": "李金发",
+   "life": "1900—1976",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "雕塑",
+    "文学翻译"
+   ],
+   "relation": "1925 年起任教（雕塑）",
+   "status": "已核实",
+   "markdown": "archive/people/li-jinfa.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E9%87%91%E9%AB%AE_%281900%E5%B9%B4%29"
+  },
+  {
+   "id": "huang-baoyue",
+   "name": "黄葆戉",
+   "life": "1880—1968",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "书法篆刻",
+    "国画"
+   ],
+   "relation": "国画系主任",
+   "status": "已核实",
+   "markdown": "archive/people/huang-baoyue.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%83%E8%91%86%E6%88%89"
+  },
+  {
+   "id": "ding-song",
+   "name": "丁悚",
+   "life": "1891—1969",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "漫画连环画",
+    "国画"
+   ],
+   "relation": "写生画教师",
+   "status": "已核实",
+   "markdown": "archive/people/ding-song.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E4%B8%81%E6%82%9A"
+  },
+  {
+   "id": "he-tianjian",
+   "name": "贺天健",
+   "life": "1891—1977",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "曾任教（山水画）",
+   "status": "已核实",
+   "markdown": "archive/people/he-tianjian.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%B4%BA%E5%A4%A9%E5%81%A5"
+  },
+  {
+   "id": "jiang-hanting",
+   "name": "江寒汀",
+   "life": "1904—1963",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画"
+   ],
+   "relation": "曾任教（花鸟画）",
+   "status": "已核实",
+   "markdown": "archive/people/jiang-hanting.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B1%9F%E5%AF%92%E6%B1%80"
+  },
+  {
+   "id": "lu-yifei",
+   "name": "陆抑非",
+   "life": "1908—1997",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "曾任教（花鸟画）",
+   "status": "已核实",
+   "markdown": "archive/people/lu-yifei.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%86%E6%8A%91%E9%9D%9E"
+  },
+  {
+   "id": "li-yishi",
+   "name": "李毅士",
+   "life": "1886—1942",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "油画"
+   ],
+   "relation": "1924 年任教务长",
+   "status": "已核实",
+   "markdown": "archive/people/li-yishi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E6%AF%85%E5%A3%AB"
+  },
+  {
+   "id": "wu-fading",
+   "name": "吴法鼎",
+   "life": "1883—1924",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "油画"
+   ],
+   "relation": "1923 年任教授兼教务长",
+   "status": "已核实",
+   "markdown": "archive/people/wu-fading.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%90%B4%E6%B3%95%E9%BC%8E"
+  },
+  {
+   "id": "cheng-maoyun",
+   "name": "程懋筠",
+   "life": "1900—1957",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1949 年后任声乐教授",
+   "status": "已核实",
+   "markdown": "archive/people/cheng-maoyun.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%A8%8B%E6%87%8B%E7%AD%A0"
+  },
+  {
+   "id": "zhu-fukan",
+   "name": "朱复戡",
+   "life": "1900—1989",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "书法篆刻"
+   ],
+   "relation": "教授（书法篆刻）",
+   "status": "已核实",
+   "markdown": "archive/people/zhu-fukan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9C%B1%E5%A4%8D%E6%88%A1"
+  },
+  {
+   "id": "li-qiujun",
+   "name": "李秋君",
+   "life": "1899—1971",
+   "role": "教师",
+   "gender": "female",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "曾任教（国画）",
+   "status": "已核实",
+   "markdown": "archive/people/li-qiujun.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E7%A7%8B%E5%90%9B"
+  },
+  {
+   "id": "zhu-qizhan",
+   "name": "朱屺瞻",
+   "life": "1892—1996",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "油画"
+   ],
+   "relation": "1912 年入学，次年留校任教",
+   "status": "已核实",
+   "markdown": "archive/people/zhu-qizhan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9C%B1%E5%B1%BA%E7%9E%BB"
+  },
+  {
+   "id": "pan-yuliang",
+   "name": "潘玉良",
+   "life": "1899—1977",
+   "role": "校友兼教师",
+   "gender": "female",
+   "fields": [
+    "油画",
+    "雕塑",
+    "美术教育"
+   ],
+   "relation": "1920 年首批女生入学；1928 年任西画科主任",
+   "status": "已核实",
+   "markdown": "archive/people/pan-yuliang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%BD%98%E7%8E%89%E8%89%AF"
+  },
+  {
+   "id": "liu-kang",
+   "name": "刘抗",
+   "life": "1911—2004",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1927 年毕业；1933—1937 年任教",
+   "status": "已核实",
+   "markdown": "archive/people/liu-kang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%88%98%E6%8A%97"
+  },
+  {
+   "id": "zhu-wenyun",
+   "name": "诸闻韵",
+   "life": "1895—1939",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "校友，后任国画系主任",
+   "status": "已核实",
+   "markdown": "archive/people/zhu-wenyun.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%AF%B8%E9%97%BB%E9%9F%B5"
+  },
+  {
+   "id": "wu-fuzhi",
+   "name": "吴茀之",
+   "life": "1900—1977",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1922 年入学；1929 年任教授",
+   "status": "已核实",
+   "markdown": "archive/people/wu-fuzhi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%90%B4%E8%8C%80%E4%B9%8B"
+  },
+  {
+   "id": "wan-guchan",
+   "name": "万古蟾",
+   "life": "1900—1995",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "动画",
+    "油画"
+   ],
+   "relation": "1920 年毕业，曾任西画教员",
+   "status": "已核实",
+   "markdown": "archive/people/wan-guchan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E4%B8%87%E5%8F%A4%E8%9F%BE"
+  },
+  {
+   "id": "chen-dayu",
+   "name": "陈大羽",
+   "life": "1912—2001",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻",
+    "美术教育"
+   ],
+   "relation": "1935 年毕业；1948 年起任教",
+   "status": "已核实",
+   "markdown": "archive/people/chen-dayu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%88%E5%A4%A7%E7%BE%BD"
+  },
+  {
+   "id": "shen-zhiyu",
+   "name": "沈之瑜",
+   "life": "1916—1990",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "博物馆文博",
+    "美术教育"
+   ],
+   "relation": "1935 年毕业，留校任助教",
+   "status": "已核实",
+   "markdown": "archive/people/shen-zhiyu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B2%88%E4%B9%8B%E7%91%9C"
+  },
+  {
+   "id": "chen-shuliang",
+   "name": "陈叔亮",
+   "life": "1901—1991",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "书法篆刻",
+    "国画",
+    "工艺设计",
+    "美术史论"
+   ],
+   "relation": "1931 年毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/chen-shuliang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%88%E5%8F%94%E4%BA%AE_%281901%E5%B9%B4%29"
+  },
+  {
+   "id": "li-keran",
+   "name": "李可染",
+   "life": "1907—1989",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1923 年入师范科",
+   "status": "已核实",
+   "markdown": "archive/people/li-keran.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E5%8F%AF%E6%9F%93"
+  },
+  {
+   "id": "zhao-dan",
+   "name": "赵丹",
+   "life": "1915—1980",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "电影戏剧",
+    "国画"
+   ],
+   "relation": "1931 年入学（国画）",
+   "status": "已核实",
+   "markdown": "archive/people/zhao-dan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%B5%B5%E4%B8%B9"
+  },
+  {
+   "id": "cheng-shifa",
+   "name": "程十发",
+   "life": "1921—2007",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "漫画连环画",
+    "书法篆刻"
+   ],
+   "relation": "1938 年入学（国画系）",
+   "status": "已核实",
+   "markdown": "archive/people/cheng-shifa.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%A8%8B%E5%8D%81%E9%AB%AE"
+  },
+  {
+   "id": "zhang-shuqi",
+   "name": "张书旂",
+   "life": "1900—1957",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画"
+   ],
+   "relation": "1922 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-shuqi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%A0%E4%B9%A6%E6%97%82"
+  },
+  {
+   "id": "chang-yu",
+   "name": "常玉",
+   "life": "1895—1966",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画"
+   ],
+   "relation": "1917 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/chang-yu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%B8%B8%E7%8E%89"
+  },
+  {
+   "id": "mu-xin",
+   "name": "木心",
+   "life": "1927—2011",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "文学翻译"
+   ],
+   "relation": "1946 年入学，1948 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/mu-xin.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9C%A8%E5%BF%83"
+  },
+  {
+   "id": "walasse-ting",
+   "name": "丁雄泉",
+   "life": "1929—2010",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画"
+   ],
+   "relation": "曾就读",
+   "status": "已核实",
+   "markdown": "archive/people/walasse-ting.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E4%B8%81%E9%9B%84%E6%B3%89"
+  },
+  {
+   "id": "han-leran",
+   "name": "韩乐然",
+   "life": "1898—1947",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1921 年入学，1924 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/han-leran.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%9F%A9%E4%B9%90%E7%84%B6"
+  },
+  {
+   "id": "chen-tingshi",
+   "name": "陈庭诗",
+   "life": "1913—2002",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "版画",
+    "雕塑"
+   ],
+   "relation": "1937 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/chen-tingshi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%B3%E5%BA%AD%E8%A9%A9"
+  },
+  {
+   "id": "li-zhongsheng",
+   "name": "李仲生",
+   "life": "1912—1984",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "就读绘画研究所",
+   "status": "已核实",
+   "markdown": "archive/people/li-zhongsheng.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E4%BB%B2%E7%94%9F"
+  },
+  {
+   "id": "wang-panyuan",
+   "name": "王攀元",
+   "life": "1909—2017",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画"
+   ],
+   "relation": "1933 年入学，1936 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/wang-panyuan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E6%94%80%E5%85%83"
+  },
+  {
+   "id": "huang-zhen",
+   "name": "黄镇",
+   "life": "1909—1989",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "外交政务",
+    "国画",
+    "漫画连环画"
+   ],
+   "relation": "1925 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/huang-zhen.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%84%E9%95%87"
+  },
+  {
+   "id": "fang-ganmin",
+   "name": "方干民",
+   "life": "1906—1984",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1924 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/fang-ganmin.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%96%B9%E5%B9%B9%E6%B0%91"
+  },
+  {
+   "id": "wang-ziyun",
+   "name": "王子云",
+   "life": "1897—1990",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "雕塑",
+    "美术史论"
+   ],
+   "relation": "1916 年进修",
+   "status": "部分核实",
+   "markdown": "archive/people/wang-ziyun.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%AD%90%E4%BA%91"
+  },
+  {
+   "id": "fu-luofei",
+   "name": "符罗飞",
+   "life": "1897—1971",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1922 年入学，1925 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/fu-luofei.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%AC%A6%E7%BD%97%E9%A3%9E"
+  },
+  {
+   "id": "cai-ruohong",
+   "name": "蔡若虹",
+   "life": "1910—2002",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "漫画连环画",
+    "美术史论"
+   ],
+   "relation": "1931 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/cai-ruohong.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%94%A1%E8%8B%A5%E8%99%B9"
+  },
+  {
+   "id": "wang-shikuo",
+   "name": "王式廓",
+   "life": "1911—1973",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1935 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/wang-shikuo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%BC%8F%E5%BB%93"
+  },
+  {
+   "id": "guo-weiqu",
+   "name": "郭味蕖",
+   "life": "1908—1971",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术史论"
+   ],
+   "relation": "1929 年入学（西画）",
+   "status": "已核实",
+   "markdown": "archive/people/guo-weiqu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%83%AD%E5%91%B3%E8%95%96"
+  },
+  {
+   "id": "wang-bomin",
+   "name": "王伯敏",
+   "life": "1924—2013",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术史论"
+   ],
+   "relation": "1947 年毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/wang-bomin.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E4%BC%AF%E6%95%8F"
+  },
+  {
+   "id": "li-luogong",
+   "name": "李骆公",
+   "life": "1917—1992",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "书法篆刻"
+   ],
+   "relation": "校友",
+   "status": "部分核实",
+   "markdown": "archive/people/li-luogong.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9D%8E%E9%AA%86%E5%85%AC"
+  },
+  {
+   "id": "xie-zhiguang",
+   "name": "谢之光",
+   "life": "1899—1976",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "工艺设计"
+   ],
+   "relation": "校友",
+   "status": "已核实",
+   "markdown": "archive/people/xie-zhiguang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%B0%A2%E4%B9%8B%E5%85%89"
+  },
+  {
+   "id": "chen-qiucao",
+   "name": "陈秋草",
+   "life": "1906—1988",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画",
+    "博物馆文博"
+   ],
+   "relation": "1925 年肄业",
+   "status": "已核实",
+   "markdown": "archive/people/chen-qiucao.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%88%E7%A7%8B%E8%8D%89"
+  },
+  {
+   "id": "yu-yixuan",
+   "name": "喻宜萱",
+   "life": "1909—2008",
+   "role": "校友",
+   "gender": "female",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1927 年入图音系",
+   "status": "已核实",
+   "markdown": "archive/people/yu-yixuan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%96%BB%E5%AE%9C%E8%90%B1"
+  },
+  {
+   "id": "jiang-dingxian",
+   "name": "江定仙",
+   "life": "1912—2000",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1928 年入音乐系",
+   "status": "已核实",
+   "markdown": "archive/people/jiang-dingxian.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B1%9F%E5%AE%9A%E4%BB%99"
+  },
+  {
+   "id": "huang-yuanluo",
+   "name": "黄源洛",
+   "life": "1910—1989",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1928 年入音乐科",
+   "status": "已核实",
+   "markdown": "archive/people/huang-yuanluo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%84%E6%BA%90%E6%B4%9B"
+  },
+  {
+   "id": "chen-tianhe",
+   "name": "陈田鹤",
+   "life": "1911—1955",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1929 年入音乐组",
+   "status": "已核实",
+   "markdown": "archive/people/chen-tianhe.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%99%B3%E7%94%B0%E9%B6%B4"
+  },
+  {
+   "id": "hou-zuowu",
+   "name": "侯作吾",
+   "life": "1910—1963",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "音乐"
+   ],
+   "relation": "1933 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/hou-zuowu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E4%BE%AF%E4%BD%9C%E5%90%BE"
+  },
+  {
+   "id": "zhao-qingge",
+   "name": "赵清阁",
+   "life": "1914—1999",
+   "role": "校友",
+   "gender": "female",
+   "fields": [
+    "电影戏剧",
+    "文学翻译",
+    "国画"
+   ],
+   "relation": "1933 年入学",
+   "status": "部分核实",
+   "markdown": "archive/people/zhao-qingge.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%B5%B5%E6%B8%85%E9%98%81"
+  },
+  {
+   "id": "zhang-zhenduo",
+   "name": "张振铎",
+   "life": "1908—1989",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1927 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-zhenduo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%A0%E6%8C%AF%E9%93%8E"
+  },
+  {
+   "id": "huang-ruozhou",
+   "name": "黄若舟",
+   "life": "1906—2000",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "书法篆刻",
+    "国画"
+   ],
+   "relation": "1928 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/huang-ruozhou.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%84%E8%8B%A5%E8%88%9F"
+  },
+  {
+   "id": "wu-yonggang",
+   "name": "吴永刚",
+   "life": "1907—1982",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "电影戏剧"
+   ],
+   "relation": "1928 年入西画系",
+   "status": "已核实",
+   "markdown": "archive/people/wu-yonggang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%90%B4%E6%B0%B8%E5%88%9A"
+  },
+  {
+   "id": "yu-zheguang",
+   "name": "虞哲光",
+   "life": "1906—1991",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "动画",
+    "电影戏剧"
+   ],
+   "relation": "1925 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/yu-zheguang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%99%9E%E5%93%B2%E5%85%89"
+  },
+  {
+   "id": "peng-di",
+   "name": "朋弟",
+   "life": "1907—1983",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "漫画连环画"
+   ],
+   "relation": "1930 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/peng-di.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9C%8B%E5%BC%9F"
+  },
+  {
+   "id": "jian-qingfu",
+   "name": "简庆福",
+   "life": "1921—",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "摄影"
+   ],
+   "relation": "校友",
+   "status": "部分核实",
+   "markdown": "archive/people/jian-qingfu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%B0%A1%E6%85%B6%E7%A6%8F"
+  },
+  {
+   "id": "tian-xuewen",
+   "name": "田学文",
+   "life": "1911—1994",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1935 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/tian-xuewen.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%94%B0%E5%AD%B8%E6%96%87"
+  },
+  {
+   "id": "sha-qi",
+   "name": "沙耆",
+   "life": "1914—2005",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画"
+   ],
+   "relation": "1932 年就读",
+   "status": "已核实",
+   "markdown": "archive/people/sha-qi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%B2%99%E8%80%86"
+  },
+  {
+   "id": "guan-chufei",
+   "name": "管锄非",
+   "life": "1911—1995",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻"
+   ],
+   "relation": "1932 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/guan-chufei.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%AE%A1%E9%94%84%E9%9D%9E"
+  },
+  {
+   "id": "liang-dingming",
+   "name": "梁鼎铭",
+   "life": "1898—1959",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画"
+   ],
+   "relation": "1915 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/liang-dingming.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%A2%81%E9%BC%8E%E9%8A%98"
+  },
+  {
+   "id": "yuan-xiaoyuan",
+   "name": "袁晓园",
+   "life": "1901—2003",
+   "role": "校友",
+   "gender": "female",
+   "fields": [
+    "外交政务"
+   ],
+   "relation": "转学入读",
+   "status": "部分核实",
+   "markdown": "archive/people/yuan-xiaoyuan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%A2%81%E6%9B%89%E5%9C%92"
+  },
+  {
+   "id": "xu-xingzhi",
+   "name": "许幸之",
+   "life": "1904—1991",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "电影戏剧",
+    "油画",
+    "文学翻译"
+   ],
+   "relation": "1922 年毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/xu-xingzhi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%AE%B8%E5%B9%B8%E4%B9%8B"
+  },
+  {
+   "id": "ni-yide",
+   "name": "倪贻德",
+   "life": "1901—1970",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术史论",
+    "美术教育"
+   ],
+   "relation": "校友，后任教",
+   "status": "部分核实",
+   "markdown": "archive/people/ni-yide.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%80%AA%E8%B4%BB%E5%BE%B7"
+  },
+  {
+   "id": "gu-shengyue",
+   "name": "顾生岳",
+   "life": "1927—2012",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育"
+   ],
+   "relation": "早年就读",
+   "status": "部分核实",
+   "markdown": "archive/people/gu-shengyue.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%A1%BE%E7%94%9F%E5%B2%B3"
+  },
+  {
+   "id": "long-wen",
+   "name": "龙文",
+   "life": "1896—1970",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术教育",
+    "美术史论"
+   ],
+   "relation": "高等师范科毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/long-wen.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BE%99%E6%96%87_%28%E7%BE%8E%E6%9C%AF%E6%95%99%E8%82%B2%E5%AE%B6%29"
+  },
+  {
+   "id": "yang-yinshen",
+   "name": "杨荫深",
+   "life": "1908—1989",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "文学翻译"
+   ],
+   "relation": "1926—1928 年绘画科",
+   "status": "已核实",
+   "markdown": "archive/people/yang-yinshen.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%A5%8A%E8%94%AD%E6%B7%B1"
+  },
+  {
+   "id": "luo-wenmo",
+   "name": "罗文谟",
+   "life": "1902—1951",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻",
+    "美术教育",
+    "外交政务"
+   ],
+   "relation": "1925 年毕业，师从刘海粟",
+   "status": "已核实",
+   "markdown": "archive/people/luo-wenmo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%BE%85%E6%96%87%E8%AC%A8"
+  },
+  {
+   "id": "mo-kai",
+   "name": "莫凯",
+   "life": "1904—1991",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "电影戏剧"
+   ],
+   "relation": "1924 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/mo-kai.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E5%87%AF"
+  },
+  {
+   "id": "zeng-jingbing",
+   "name": "曾镜冰",
+   "life": "1912—1967",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "外交政务"
+   ],
+   "relation": "曾就读",
+   "status": "部分核实",
+   "markdown": "archive/people/zeng-jingbing.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%9B%BE%E9%95%9C%E5%86%B0"
+  },
+  {
+   "id": "ding-xuezhu",
+   "name": "丁学洙",
+   "life": "1913—2002",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "国画",
+    "美术教育"
+   ],
+   "relation": "1932—1937 年就读",
+   "status": "已核实",
+   "markdown": "archive/people/ding-xuezhu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E4%B8%81%E5%AD%B8%E6%B4%99"
+  },
+  {
+   "id": "fang-xiangming",
+   "name": "方向明",
+   "life": "1906—1999",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "美术教育",
+    "外交政务"
+   ],
+   "relation": "1925 年后就读",
+   "status": "部分核实",
+   "markdown": "archive/people/fang-xiangming.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E6%96%B9%E5%90%91%E6%98%8E_%281906%E5%B9%B4%29"
+  },
+  {
+   "id": "dong-zhongsheng",
+   "name": "董仲升",
+   "life": "1899—1976",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "美术教育"
+   ],
+   "relation": "1921—1923 年就读",
+   "status": "已核实",
+   "markdown": "archive/people/dong-zhongsheng.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%91%A3%E4%BB%B2%E5%8D%87"
+  },
+  {
+   "id": "huang-qilong",
+   "name": "黄启龙",
+   "life": "1923—2010",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "油画",
+    "工艺设计",
+    "美术教育"
+   ],
+   "relation": "毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/huang-qilong.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%BB%83%E5%95%9F%E9%BE%8D"
+  },
+  {
+   "id": "hu-yefo",
+   "name": "胡也佛",
+   "life": "1908—1980",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "漫画连环画"
+   ],
+   "relation": "曾就读，后转新华艺专",
+   "status": "部分核实",
+   "markdown": "archive/people/hu-yefo.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%83%A1%E4%B9%9F%E4%BD%9B"
+  },
+  {
+   "id": "meng-guang",
+   "name": "孟光",
+   "life": "1921—1996",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1940 年毕业",
+   "status": "已核实",
+   "markdown": "archive/people/meng-guang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%AD%9F%E5%85%89_%28%E7%95%AB%E5%AE%B6%29"
+  },
+  {
+   "id": "zhang-tianyi",
+   "name": "张天翼",
+   "life": "1906—1985",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "文学翻译"
+   ],
+   "relation": "1924 年入学",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-tianyi.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%A0%E5%A4%A9%E7%BF%BC"
+  },
+  {
+   "id": "zhao-shujia",
+   "name": "赵淑嘉",
+   "life": "1898—1984",
+   "role": "校友",
+   "gender": "female",
+   "fields": [
+    "美术教育",
+    "外交政务"
+   ],
+   "relation": "毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/zhao-shujia.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%B6%99%E6%B7%91%E5%98%89"
+  },
+  {
+   "id": "ye-lingfeng",
+   "name": "叶灵凤",
+   "life": "1905—1975",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "文学翻译",
+    "工艺设计"
+   ],
+   "relation": "曾就读",
+   "status": "部分核实",
+   "markdown": "archive/people/ye-lingfeng.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%91%89%E9%9D%88%E9%B3%B3"
+  },
+  {
+   "id": "xu-wentian",
+   "name": "许闻天",
+   "life": "1902—1982",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "外交政务"
+   ],
+   "relation": "毕业",
+   "status": "部分核实",
+   "markdown": "archive/people/xu-wentian.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E8%AE%B8%E9%97%BB%E5%A4%A9"
+  },
+  {
+   "id": "wang-tongzhao",
+   "name": "王统照",
+   "life": "1897—1957",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "文学翻译"
+   ],
+   "relation": "1938 年讲学",
+   "status": "已核实",
+   "markdown": "archive/people/wang-tongzhao.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E7%BB%9F%E7%85%A7"
+  },
+  {
+   "id": "tong-shuye",
+   "name": "童书业",
+   "life": "1908—1968",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "美术史论",
+    "博物馆文博"
+   ],
+   "relation": "1937 年起国画系讲师",
+   "status": "已核实",
+   "markdown": "archive/people/tong-shuye.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E7%AB%A5%E4%B9%A6%E4%B8%9A"
+  },
+  {
+   "id": "zhang-shengzang",
+   "name": "张圣奘",
+   "life": "1903—1992",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "美术史论",
+    "博物馆文博",
+    "文学翻译"
+   ],
+   "relation": "1931—1932 年世界文学教授",
+   "status": "已核实",
+   "markdown": "archive/people/zhang-shengzang.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%B5%E8%81%96%E5%A5%98"
+  },
+  {
+   "id": "zhang-xiaolou",
+   "name": "张小楼",
+   "life": "1877—1950",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻"
+   ],
+   "relation": "曾任教",
+   "status": "部分核实",
+   "markdown": "archive/people/zhang-xiaolou.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BC%B5%E5%B0%8F%E5%BB%94"
+  },
+  {
+   "id": "ma-gongyu",
+   "name": "马公愚",
+   "life": "1890—1969",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻",
+    "工艺设计"
+   ],
+   "relation": "1924 年后任教授",
+   "status": "已核实",
+   "markdown": "archive/people/ma-gongyu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%85%AC%E6%84%9A"
+  },
+  {
+   "id": "wei-xiyan",
+   "name": "魏惜言",
+   "life": "1904—1986",
+   "role": "创办人/校长",
+   "gender": "",
+   "fields": [
+    "美术教育",
+    "外交政务"
+   ],
+   "relation": "曾任校长（据维基条目）",
+   "status": "部分核实",
+   "markdown": "archive/people/wei-xiyan.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E9%AD%8F%E6%83%9C%E8%A8%80"
+  },
+  {
+   "id": "xu-xinliu",
+   "name": "徐新六",
+   "life": "1890—1938",
+   "role": "校董",
+   "gender": "",
+   "fields": [
+    "外交政务"
+   ],
+   "relation": "1932—1937 年校董",
+   "status": "已核实",
+   "markdown": "archive/people/xu-xinliu.md",
+   "wikipedia": "https://zh.wikipedia.org/wiki/%E5%BE%90%E6%96%B0%E5%85%AD"
+  },
+  {
+   "id": "qiu-ti",
+   "name": "丘堤",
+   "life": "1906—1958",
+   "role": "校友",
+   "gender": "female",
+   "fields": [
+    "油画"
+   ],
+   "relation": "1928 年毕业，后任油画系研究员",
+   "status": "已核实",
+   "markdown": "archive/people/qiu-ti.md",
+   "wikipedia": "https://en.wikipedia.org/wiki/Qiu_Ti"
+  },
+  {
+   "id": "chen-renhao",
+   "name": "陈人浩",
+   "life": "1908—1976",
+   "role": "校友兼教师",
+   "gender": "",
+   "fields": [
+    "油画",
+    "美术教育"
+   ],
+   "relation": "1926 年入学，1933 年任教授",
+   "status": "已核实",
+   "markdown": "archive/people/chen-renhao.md",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chen_Jen_Hao"
+  },
+  {
+   "id": "cai-hongzhong",
+   "name": "蔡洪钟",
+   "life": "1915—2003",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "国画",
+    "油画",
+    "美术教育",
+    "音乐"
+   ],
+   "relation": "1940 年代初就读",
+   "status": "部分核实",
+   "markdown": "archive/people/cai-hongzhong.md",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tsai_Horng_Chung"
+  },
+  {
+   "id": "xu-jiaguang",
+   "name": "许家光",
+   "life": "1922—2003",
+   "role": "校友",
+   "gender": "",
+   "fields": [
+    "雕塑",
+    "工艺设计",
+    "美术教育"
+   ],
+   "relation": "曾就读",
+   "status": "部分核实",
+   "markdown": "archive/people/xu-jiaguang.md",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ka_Kwong_Hui"
+  },
+  {
+   "id": "zheng-manqing",
+   "name": "郑曼青",
+   "life": "1902—1975",
+   "role": "教师",
+   "gender": "",
+   "fields": [
+    "国画",
+    "书法篆刻"
+   ],
+   "relation": "曾任国画系主任",
+   "status": "部分核实",
+   "markdown": "archive/people/zheng-manqing.md",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cheng_Man-ch%27ing"
+  }
+ ]
+}

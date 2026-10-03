@@ -1,7 +1,7 @@
 // 上海美专名人图谱数据。坐标统一为 WGS-84；approx 表示城市级或近似坐标。
 // 字段说明见“说明”页。补充人物时复制一条记录修改即可。
 window.SHART_DATA = {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "people": [
     {
       "id": "liu-haisu",
@@ -1978,7 +1978,8 @@ window.SHART_DATA = {
           "url": "https://zh.wikipedia.org/wiki/李秋君"
         }
       ],
-      "status": "verified"
+      "status": "verified",
+      "gender": "female"
     },
     {
       "id": "zhu-qizhan",
@@ -2207,7 +2208,8 @@ window.SHART_DATA = {
           "url": "https://www.ahm.cn/"
         }
       ],
-      "status": "verified"
+      "status": "verified",
+      "gender": "female"
     },
     {
       "id": "liu-kang",
@@ -4150,7 +4152,8 @@ window.SHART_DATA = {
           "url": "https://zh.wikipedia.org/wiki/喻宜萱"
         }
       ],
-      "status": "verified"
+      "status": "verified",
+      "gender": "female"
     },
     {
       "id": "jiang-dingxian",
@@ -4425,7 +4428,8 @@ window.SHART_DATA = {
           "url": "https://zh.wikipedia.org/wiki/赵清阁"
         }
       ],
-      "status": "partial"
+      "status": "partial",
+      "gender": "female"
     },
     {
       "id": "zhang-zhenduo",
@@ -4991,7 +4995,8 @@ window.SHART_DATA = {
           "url": "https://zh.wikipedia.org/wiki/袁晓园"
         }
       ],
-      "status": "partial"
+      "status": "partial",
+      "gender": "female"
     },
     {
       "id": "xu-xingzhi",
@@ -5108,6 +5113,1466 @@ window.SHART_DATA = {
       ],
       "status": "partial",
       "notes": "维基百科倪贻德条目内容较简略，上海美专毕业年份等出自其他传记资料，请复核。"
+    },
+    {
+      "id": "gu-shengyue",
+      "name": "顾生岳",
+      "life": "1927—2012",
+      "born": "浙江舟山（祖籍镇海）",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "美术教育"
+      ],
+      "relation": "早年就读于上海美术专科学校，1952 年毕业于浙江美术学院并留校任教。",
+      "relationShort": "早年就读",
+      "bio": [
+        "顾生岳是国画家，尤擅工笔人物画，为“新浙派”代表画家之一。早年就读于上海美专，1952 年毕业于浙江美术学院（今中国美术学院）并留校任教，曾任浙江美术学院中国画系主任、浙江画院副院长、杭州市美术家协会主席、浙江人物画研究会会长、中国工笔画艺术委员会副主委，中国美术学院教授。"
+      ],
+      "contributions": [
+        "新浙派工笔人物画代表画家",
+        "长期任教浙江美术学院，曾任中国画系主任"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "中国美术学院（原浙江美术学院）",
+          "city": "杭州",
+          "lat": 30.2465,
+          "lng": 120.163,
+          "note": "1952 年毕业后留校任教，曾任中国画系主任。",
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "舟山",
+          "city": "舟山",
+          "lat": 30.016,
+          "lng": 122.1067,
+          "note": "出生地（祖籍镇海）。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：顾生岳",
+          "url": "https://zh.wikipedia.org/wiki/顾生岳"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目仅称“早年就读”，未载入学与离校年份。"
+    },
+    {
+      "id": "long-wen",
+      "name": "龙文",
+      "alias": "字埔珊，笔名铁岩",
+      "life": "1896—1970",
+      "born": "陕西城固",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "美术教育",
+        "美术史论"
+      ],
+      "relation": "毕业于上海美术专门学校高等师范科。",
+      "relationShort": "高等师范科毕业",
+      "bio": [
+        "龙文是美术教育家，终生致力中国山水画。曾任教城固、汉中各校，1927 年任上海新华美专教员，后任南京国民政府审计院估理员十年，参加中国美术会并任理事、《美术季刊》编辑。抗战期间回汉中任教，后任西北师范学院劳作科讲师、副教授及西北大学历史系副教授；1946 年参与筹建陕西师范专科学校陕南分校并主持校务，同年当选国大代表。",
+        "著有《中国山水画论》等，《中国美术家人名大词典》录有其名。"
+      ],
+      "contributions": [
+        "陕南美术教育先行者",
+        "著《中国山水画论》"
+      ],
+      "works": [
+        "《中国山水画论》"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "城固县",
+          "city": "汉中城固",
+          "lat": 33.157,
+          "lng": 107.3337,
+          "note": "出生地（天明乡赵家坝村），晚年任城固县政协委员。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：龙文 (美术教育家)",
+          "url": "https://zh.wikipedia.org/wiki/龙文_(美术教育家)"
+        }
+      ],
+      "status": "partial",
+      "notes": "生卒月份维基条目存疑（标为“？日”）。"
+    },
+    {
+      "id": "yang-yinshen",
+      "name": "杨荫深",
+      "alias": "原名杨德恩，字泽夫",
+      "life": "1908—1989",
+      "born": "浙江鄞县",
+      "role": "student",
+      "schoolYear": 1926,
+      "fields": [
+        "文学翻译"
+      ],
+      "relation": "1926 至 1928 年在上海美术专科学校绘画科读书。",
+      "relationShort": "1926—1928 年绘画科",
+      "bio": [
+        "杨荫深是编辑、中国民俗与文学史专家。美专毕业后任中学教员数年，1932 年任汉文正楷印书局编辑，1935 年入商务印书馆编译所，抗战期间参加修订《辞源》。1958 年任中华书局辞海编辑所文艺编辑组组长、辞海编辑委员会委员，后任上海辞书出版社编审。著有《中国文学史大纲》《中国游艺研究》《中国俗文学概论》等。"
+      ],
+      "contributions": [
+        "参与《辞源》修订与《辞海》编纂",
+        "中国民俗与俗文学研究"
+      ],
+      "works": [
+        "《中国文学史大纲》（1947）",
+        "《中国游艺研究》（1946）",
+        "《中国俗文学概论》"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "上海辞书出版社",
+          "city": "上海",
+          "lat": 31.2296,
+          "lng": 121.4565,
+          "note": "曾任编审；前身为中华书局辞海编辑所。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "鄞县（宁波）",
+          "city": "宁波",
+          "lat": 29.8683,
+          "lng": 121.544,
+          "note": "籍贯。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：杨荫深",
+          "url": "https://zh.wikipedia.org/wiki/楊蔭深"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "luo-wenmo",
+      "name": "罗文谟",
+      "alias": "字静盒，号双清馆主",
+      "life": "1902—1951",
+      "born": "四川荣县",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "书法篆刻",
+        "美术教育",
+        "外交政务"
+      ],
+      "relation": "1925 年毕业于上海美术专科学校，师从刘海粟。",
+      "relationShort": "1925 年毕业，师从刘海粟",
+      "bio": [
+        "罗文谟是书画家、美术活动家和政治人物。毕业后返川，历任成都美术专科学校、四川第一师范等校教师，蜀艺社社长、四川美术协会常务理事，并兼任多家报纸主笔、总编；曾兼任国立中央大学、燕京大学、华西大学等校艺术教授。政界方面曾任国民党四川省党部书记长、四川省参议会秘书长。"
+      ],
+      "contributions": [
+        "四川近代美术社团组织者（蜀艺社社长、四川美术协会常务理事）"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "荣县",
+          "city": "自贡荣县",
+          "lat": 29.4447,
+          "lng": 104.4175,
+          "note": "籍贯，1951 年逝世于此。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/luo-wenmo.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E7%BE%85%E6%96%87%E8%AC%A8.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：罗文谟",
+          "url": "https://zh.wikipedia.org/wiki/羅文謨"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "mo-kai",
+      "name": "莫凯",
+      "alias": "原名顾梦鹤",
+      "life": "1904—1991",
+      "born": "广州（原籍番禺）",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "电影戏剧"
+      ],
+      "relation": "1924 年毕业于上海美术专科学校。",
+      "relationShort": "1924 年毕业",
+      "bio": [
+        "莫凯是电影、话剧演员与导演。毕业后参加田汉组织的南国社；1938 年加盟皇后剧院改良文明戏，后入绿宝剧场领导文明戏改良。1949 年任中艺沪剧团导演，1959 年调努力沪剧团任导演。"
+      ],
+      "contributions": [
+        "南国社成员",
+        "文明戏与沪剧改良的导演"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "广州",
+          "city": "广州",
+          "lat": 23.1291,
+          "lng": 113.2644,
+          "note": "出生地（原籍番禺）。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：莫凯",
+          "url": "https://zh.wikipedia.org/wiki/莫凯"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "zeng-jingbing",
+      "name": "曾镜冰",
+      "alias": "又名曾毓蕃",
+      "life": "1912—1967",
+      "born": "海南琼山",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "外交政务"
+      ],
+      "relation": "就读曼谷光华中学后，赴上海美术专科学校。",
+      "relationShort": "曾就读",
+      "bio": [
+        "曾镜冰是中华人民共和国政治人物。早年参加革命，自上海美专后任共青团吉安县委书记，历任闽北军分区政治部主任、闽北独立师代政委、中共福建省委书记、闽浙赣区党委书记等；1949 年后任中共福建省委副书记、福建省政协主席。文革中被迫害致死，1983 年平反，迁葬八宝山革命公墓。"
+      ],
+      "contributions": [
+        "闽浙赣革命根据地领导人之一"
+      ],
+      "places": [
+        {
+          "type": "tomb",
+          "name": "八宝山革命公墓",
+          "city": "北京",
+          "lat": 39.9066,
+          "lng": 116.2357,
+          "note": "1983 年平反后迁葬于此。",
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "琼山（海口）",
+          "city": "海口",
+          "lat": 19.9846,
+          "lng": 110.3549,
+          "note": "籍贯：琼山县良田园村。",
+          "approx": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/zeng-jingbing.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:Zeng_Jingbing.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：曾镜冰",
+          "url": "https://zh.wikipedia.org/wiki/曾镜冰"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在美专的具体年份与学科；1948 年城工部事件等争议史实见原条目。"
+    },
+    {
+      "id": "ding-xuezhu",
+      "name": "丁学洙",
+      "life": "1913—2002",
+      "born": "安徽涡阳",
+      "role": "student",
+      "schoolYear": 1932,
+      "fields": [
+        "油画",
+        "国画",
+        "美术教育"
+      ],
+      "relation": "1932 年入上海美术专科学校学习水彩画，受校长刘海粟、水彩老师王济远、素描老师龚必正熏陶；1937 年因淞沪会战辍学。1948 年刘海粟曾当面邀其回美专任教，婉拒。",
+      "relationShort": "1932—1937 年就读",
+      "bio": [
+        "丁学洙是台湾战后第一代西洋画家、美术教育者，白色恐怖受难者。在大陆时以现代主义水彩画活跃画坛，以长江沿岸、巴蜀风景为主，色彩富丽近野兽派；1947 年来台任教台北女子师范专科学校，1953 年被以“思想左倾”罪名判刑入狱五年。1968 年起在台东东海国中任教并开设画室，培养多位东部画家，成为台湾东部代表性现代主义画家。",
+        "1990 年参加国立历史博物馆“上海美专师生联展”，与恩师刘海粟重逢。国立台湾美术馆藏有其部分水彩作品。"
+      ],
+      "timeline": [
+        [
+          "1932",
+          "入上海美专学习水彩画"
+        ],
+        [
+          "1937",
+          "因淞沪会战辍学"
+        ],
+        [
+          "1941",
+          "毕业于武昌艺术专科学校"
+        ],
+        [
+          "1947",
+          "赴台任教台北女子师范专科学校"
+        ],
+        [
+          "1953",
+          "以政治罪名入狱五年"
+        ],
+        [
+          "1968",
+          "赴台东东海国中任教"
+        ],
+        [
+          "1990",
+          "参加国立历史博物馆“上海美专师生联展”"
+        ],
+        [
+          "2002",
+          "于台东逝世"
+        ]
+      ],
+      "contributions": [
+        "台湾东部现代主义绘画代表",
+        "培养台东地区美术人才"
+      ],
+      "places": [
+        {
+          "type": "collection",
+          "name": "国立台湾美术馆",
+          "city": "台中",
+          "lat": 24.1418,
+          "lng": 120.6631,
+          "note": "维基条目载该馆搜藏其部分水彩作品。",
+          "primary": true
+        },
+        {
+          "type": "residence",
+          "name": "台东",
+          "city": "台东",
+          "lat": 22.7583,
+          "lng": 121.1444,
+          "note": "1968 年起在东海国中任教、开设画室并定居。",
+          "approx": true
+        },
+        {
+          "type": "hometown",
+          "name": "涡阳",
+          "city": "亳州涡阳",
+          "lat": 33.492,
+          "lng": 116.2117,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：丁学洙",
+          "url": "https://zh.wikipedia.org/wiki/丁學洙"
+        },
+        {
+          "title": "Wikipedia (English): Ding Shiue-ju",
+          "url": "https://en.wikipedia.org/wiki/Ding_Shiue-ju"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "fang-xiangming",
+      "name": "方向明",
+      "alias": "又名方彬",
+      "life": "1906—1999",
+      "born": "安徽太平（今黄山区）",
+      "role": "student",
+      "schoolYear": 1925,
+      "fields": [
+        "美术教育",
+        "外交政务"
+      ],
+      "relation": "1925 年后就读于上海美术专科学校、中华艺术大学。",
+      "relationShort": "1925 年后就读",
+      "bio": [
+        "方向明是中华人民共和国政治人物、教育工作者。早年曾任合肥省立第六中学初中美术教员，1938 年加入中国共产党，抗战期间在皖南、芜湖从事地下工作。1949 年后历任芜湖市教育局长、安徽省教育厅副厅长、安徽省师范学院院长、安徽大学副校长、安徽省政协副主席。"
+      ],
+      "contributions": [
+        "新中国安徽教育事业领导者之一"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "安徽大学",
+          "city": "合肥",
+          "lat": 31.8466,
+          "lng": 117.2733,
+          "note": "1964 年任副校长。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "太平县新丰（今黄山区）",
+          "city": "黄山",
+          "lat": 30.2727,
+          "lng": 118.1415,
+          "note": "籍贯。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：方向明 (1906年)",
+          "url": "https://zh.wikipedia.org/wiki/方向明_(1906年)"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目中出生年份同时出现 1906 与 1909 两种说法。"
+    },
+    {
+      "id": "dong-zhongsheng",
+      "name": "董仲升",
+      "alias": "名诚钊、运钤",
+      "life": "1899—1976",
+      "born": "浙江玉环",
+      "role": "student",
+      "schoolYear": 1921,
+      "fields": [
+        "美术教育"
+      ],
+      "relation": "1921 年 8 月考入刘海粟创办的上海美术专科学校，1923 年 1 月因家中变故退学。",
+      "relationShort": "1921—1923 年就读",
+      "bio": [
+        "董仲升是中国共产党早期人物、教育工作者。退学后长期在玉环环山小学及厦门、英属马来亚、荷属苏门答腊的华侨学校任教，1932 年因积极参加反日宣传被英国殖民政府驱逐出境。1935 年任玉环县民众教育馆馆长，1936 年加入中国共产党，组建中共玉环支部并任书记。1949 年任玉环县立初级中学（楚门中学前身）校长。1956 年肃反中被判刑，1984 年获彻底改正，1987 年恢复党籍。"
+      ],
+      "contributions": [
+        "中共玉环地方组织创建者",
+        "南洋华侨教育与家乡教育工作者"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "玉环",
+          "city": "台州玉环",
+          "lat": 28.1356,
+          "lng": 121.232,
+          "note": "籍贯：县城南斗门头村；长期在环山小学任教。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "institution",
+          "name": "楚门中学（前身玉环县立初级中学）",
+          "city": "台州玉环",
+          "lat": 28.229,
+          "lng": 121.273,
+          "note": "1949 年任校长。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：董仲升",
+          "url": "https://zh.wikipedia.org/wiki/董仲升"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "huang-qilong",
+      "name": "黄启龙",
+      "alias": "号伯翔",
+      "life": "1923—2010",
+      "born": "福建莆田",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "油画",
+        "工艺设计",
+        "美术教育"
+      ],
+      "relation": "上海美专毕业。",
+      "relationShort": "毕业",
+      "bio": [
+        "黄启龙精通国画、西画与设计，尤擅水墨花鸟，被誉为“牡丹王”。一生致力艺术教育，曾任国立师院艺术系及铭传学院、实践学院、国立艺术教育馆、台北市立美术馆国画教授，曾任全国第十届美展筹备委员兼评审委员；中外个展四十二次，作品为欧美、日本、韩国、新马等地收藏。设计作品有公卖局金龙牌香烟盒。"
+      ],
+      "contributions": [
+        "台湾水墨花鸟画家与美术教育者"
+      ],
+      "works": [
+        "公卖局金龙牌香烟盒设计",
+        "《黄启龙水墨画集》",
+        "《看画学画》"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "国立台湾师范大学（原国立师院）",
+          "city": "台北",
+          "lat": 25.0262,
+          "lng": 121.5276,
+          "note": "曾任国立师院艺术系教授。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "莆田",
+          "city": "莆田",
+          "lat": 25.454,
+          "lng": 119.0077,
+          "note": "籍贯。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：黄启龙",
+          "url": "https://zh.wikipedia.org/wiki/黃啟龍"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在上海美专的年份。"
+    },
+    {
+      "id": "hu-yefo",
+      "name": "胡也佛",
+      "alias": "原名胡国华，字大空",
+      "life": "1908—1980",
+      "born": "浙江余姚坎墩（今属慈溪）",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "漫画连环画"
+      ],
+      "relation": "只身来上海就读于上海美专，后转入新华艺专。",
+      "relationShort": "曾就读，后转新华艺专",
+      "bio": [
+        "胡也佛是连环画、仕女画、工笔画家。1929 年入上海商务印书馆美术编辑部，以“胡若佛”笔名画儿童读物；1958 年任朵云轩水印木刻社勾描组长，接触大量古画真迹。业余与张令涛合作，为多家人民美术出版社绘制《红楼梦》《西厢记》《三国演义》等古装连环画二十余种。"
+      ],
+      "contributions": [
+        "古装连环画名家",
+        "朵云轩木版水印勾描"
+      ],
+      "works": [
+        "连环画《红楼梦》",
+        "连环画《西厢记》",
+        "连环画《三国演义》"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "朵云轩",
+          "city": "上海",
+          "lat": 31.2369,
+          "lng": 121.4807,
+          "address": "南京东路",
+          "note": "1958 年起任水印木刻社勾描组长。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "坎墩（慈溪）",
+          "city": "宁波慈溪",
+          "lat": 30.2453,
+          "lng": 121.2783,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/hu-yefo.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E8%83%A1%E4%B9%9F%E4%BD%9B.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：胡也佛",
+          "url": "https://zh.wikipedia.org/wiki/胡也佛"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在上海美专的年份。"
+    },
+    {
+      "id": "meng-guang",
+      "name": "孟光",
+      "life": "1921—1996",
+      "born": "江苏常州",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "油画",
+        "美术教育"
+      ],
+      "relation": "1940 年毕业于上海美专。",
+      "relationShort": "1940 年毕业",
+      "bio": [
+        "孟光是油画家、美术教育家。1949 年起历任常州美协主席、上海师范大学艺术系副主任、上海美术学校校长、上海交通大学美术研究室主任、上海大学美术学院教授、上海科学技术大学艺术院院长，曾培养陈逸飞、夏葆元、魏景山等画家。"
+      ],
+      "contributions": [
+        "培养陈逸飞、夏葆元、魏景山等画家",
+        "曾任上海美术学校校长"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "上海大学美术学院",
+          "city": "上海",
+          "lat": 31.2783,
+          "lng": 121.4528,
+          "note": "曾任教授。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "常州",
+          "city": "常州",
+          "lat": 31.8107,
+          "lng": 119.9741,
+          "note": "籍贯。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：孟光 (画家)",
+          "url": "https://zh.wikipedia.org/wiki/孟光_(畫家)"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "zhang-tianyi",
+      "name": "张天翼",
+      "alias": "原名张元定",
+      "life": "1906—1985",
+      "born": "南京（祖籍湖南湘乡）",
+      "role": "student",
+      "schoolYear": 1924,
+      "fields": [
+        "文学翻译"
+      ],
+      "relation": "1924 年进入上海美术专门学校学习，1926 年考入北京大学预科。",
+      "relationShort": "1924 年入学",
+      "bio": [
+        "张天翼是儿童文学家与小说家，被夏志清列为“中国现代文学四大家”之一。1931 年加入中国左翼作家联盟，1938 年发表讽刺小说《华威先生》。1950 年后历任中央文学研究所副主任、中国作协书记处书记、《人民文学》主编。代表作有《包氏父子》《大林与小林》《宝葫芦的秘密》等。"
+      ],
+      "contributions": [
+        "现代儿童文学奠基者之一"
+      ],
+      "works": [
+        "《大林与小林》",
+        "《宝葫芦的秘密》",
+        "《华威先生》",
+        "《包氏父子》"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "南京",
+          "city": "南京",
+          "lat": 32.0603,
+          "lng": 118.7969,
+          "note": "出生地。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/zhang-tianyi.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:Comrade_Zhang_Tianyi.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：张天翼",
+          "url": "https://zh.wikipedia.org/wiki/张天翼"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "zhao-shujia",
+      "name": "赵淑嘉",
+      "alias": "名懿，字敬若",
+      "life": "1898—1984",
+      "born": "江苏常熟",
+      "gender": "female",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "美术教育",
+        "外交政务"
+      ],
+      "relation": "上海美术专门学校毕业。",
+      "relationShort": "毕业",
+      "bio": [
+        "赵淑嘉是女子教育家与妇女运动人士。曾任上海博文女校校长、上海女权运动同盟会常务理事、中国妇女慰劳自卫抗战将士总会常务理事、全国儿童保育会四川分会常务理事，并任广东省临时参议会议员、制宪国大代表，1951 年递补为第一届立法委员。"
+      ],
+      "contributions": [
+        "女子教育（上海博文女校校长）",
+        "女权运动与抗战妇女慰劳、儿童保育工作"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "常熟",
+          "city": "苏州常熟",
+          "lat": 31.6539,
+          "lng": 120.7522,
+          "note": "籍贯。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/zhao-shujia.jpg",
+        "caption": "肖像",
+        "credit": "立法院立法委員名鑑指導委員會, 民42 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E8%B6%99%E6%B7%91%E5%98%89.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：赵淑嘉",
+          "url": "https://zh.wikipedia.org/wiki/趙淑嘉"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在上海美专的年份与学科。"
+    },
+    {
+      "id": "ye-lingfeng",
+      "name": "叶灵凤",
+      "alias": "原名蕴璞",
+      "life": "1905—1975",
+      "born": "江苏南京",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "文学翻译",
+        "工艺设计"
+      ],
+      "relation": "幼时于上海美术专门学校学习。",
+      "relationShort": "曾就读",
+      "bio": [
+        "叶灵凤是现代作家。1925 年加入创造社，主编《洪水》半月刊，1926 年与潘汉年合办《幻洲》。抗战初期参加《救亡日报》，1938 年后定居香港，长期编辑《星岛日报》副刊，主持〈香港史地〉专栏，著《香港方物志》等，被视为香港史地掌故写作的重要作者。"
+      ],
+      "contributions": [
+        "创造社作家",
+        "香港史地与方物写作"
+      ],
+      "works": [
+        "《香港方物志》（1958）",
+        "《北窗读书录》",
+        "《女娲氏之遗孽》"
+      ],
+      "places": [
+        {
+          "type": "residence",
+          "name": "香港",
+          "city": "香港",
+          "lat": 22.2793,
+          "lng": 114.1628,
+          "note": "1938 年后定居，长期编辑《星岛日报》副刊。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "南京",
+          "city": "南京",
+          "lat": 32.0603,
+          "lng": 118.7969,
+          "note": "籍贯。",
+          "approx": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/ye-lingfeng.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%9C%E5%AE%B6%E5%8F%B6%E7%81%B5%E5%87%A4.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：叶灵凤",
+          "url": "https://zh.wikipedia.org/wiki/葉靈鳳"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目仅称“幼时于上海美术专门学校学习”，未载年份。"
+    },
+    {
+      "id": "xu-wentian",
+      "name": "许闻天",
+      "alias": "字太鹤",
+      "life": "1902—1982",
+      "born": "江苏溧阳",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "外交政务"
+      ],
+      "relation": "毕业于上海美术专科学校，后赴日本留学。",
+      "relationShort": "毕业",
+      "bio": [
+        "许闻天是政治人物，曾任小学教员、宜兴县县长、江苏省政府秘书长，1948 年当选第一届立法委员；1949 年后任政务院参事、民革中央委员，1954 年当选第一届全国人民代表大会代表。"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "溧阳",
+          "city": "常州溧阳",
+          "lat": 31.4166,
+          "lng": 119.4842,
+          "note": "籍贯。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/xu-wentian.jpg",
+        "caption": "肖像",
+        "credit": "政協秘書處 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E8%A8%B1%E8%81%9E%E5%A4%A9.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：许闻天",
+          "url": "https://zh.wikipedia.org/wiki/许闻天"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在上海美专的年份与学科。"
+    },
+    {
+      "id": "wang-tongzhao",
+      "name": "王统照",
+      "alias": "字剑三",
+      "life": "1897—1957",
+      "born": "山东诸城",
+      "role": "teacher",
+      "schoolYear": 1938,
+      "fields": [
+        "文学翻译"
+      ],
+      "relation": "1938 年在上海美术专科学校讲学，后到暨南大学任教授。",
+      "relationShort": "1938 年讲学",
+      "bio": [
+        "王统照是现代作家、诗人，1921 年与周作人、沈雁冰、郑振铎等发起成立文学研究会。代表作长篇小说《山雨》（1933）。1935 年任上海《文学》月刊主编；抗战期间在上海讲学、任教，后任山东大学中文系主任、山东省文联主席、山东省文化局局长。其墓 2006 年列为山东省文物保护单位。"
+      ],
+      "contributions": [
+        "文学研究会发起人之一",
+        "抗战时期在上海美专讲学"
+      ],
+      "works": [
+        "《山雨》（1933）",
+        "《春雨之夜》（1924）"
+      ],
+      "places": [
+        {
+          "type": "tomb",
+          "name": "王统照墓（金牛山公墓）",
+          "city": "济南",
+          "lat": 36.711,
+          "lng": 116.993,
+          "note": "葬于济南市天桥区金牛山公墓，2006 年列为山东省文物保护单位。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "诸城相州镇",
+          "city": "潍坊诸城",
+          "lat": 36.07,
+          "lng": 119.38,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：王统照",
+          "url": "https://zh.wikipedia.org/wiki/王统照"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "tong-shuye",
+      "name": "童书业",
+      "alias": "字丕绳",
+      "life": "1908—1968",
+      "born": "安徽芜湖（祖籍浙江鄞县）",
+      "role": "teacher",
+      "schoolYear": 1937,
+      "fields": [
+        "国画",
+        "美术史论",
+        "博物馆文博"
+      ],
+      "relation": "1937 年 9 月赴上海，任光华大学教授，兼民立女子中学教员和上海美术专科学校国画系讲师。",
+      "relationShort": "1937 年起国画系讲师",
+      "bio": [
+        "童书业是历史学家、先秦史与文物史专家，擅长绘画与文物鉴定，为顾颉刚的得意门生、古史辨派主要代表之一。1941 年出版《春秋史》。1945 年后历任上海博物馆干事、历史部主任和总务部主任，1949 年起任山东大学历史系教授、副主任。"
+      ],
+      "contributions": [
+        "上海美专国画系讲师",
+        "先秦史与中国绘画史、文物鉴定研究"
+      ],
+      "works": [
+        "《春秋史》（1941）"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "山东大学（青岛）",
+          "city": "青岛",
+          "lat": 36.064,
+          "lng": 120.326,
+          "note": "1949 年起任历史系教授。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "芜湖",
+          "city": "芜湖",
+          "lat": 31.3526,
+          "lng": 118.433,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：童书业",
+          "url": "https://zh.wikipedia.org/wiki/童书业"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "zhang-shengzang",
+      "name": "张圣奘",
+      "alias": "名新，学名义端",
+      "life": "1903—1992",
+      "born": "湖北江陵（祖籍蒲圻）",
+      "role": "teacher",
+      "schoolYear": 1931,
+      "fields": [
+        "美术史论",
+        "博物馆文博",
+        "文学翻译"
+      ],
+      "relation": "1931 年 1 月至 1932 年 1 月受聘为上海美术专科学校世界文学教授，并参与该校课程改革。",
+      "relationShort": "1931—1932 年世界文学教授",
+      "bio": [
+        "张圣奘是历史学家、考古学家、教育家。北京大学英国文学系毕业，1934 年后长期在重庆大学、中央大学等校任教。1951 年任成渝铁路文物调查征集工作小组组长，在资阳黄鳝溪发现人类头盖骨化石，即旧石器时代晚期的“资阳人”；1953 年发表《大足安岳的石窟艺术》，为安岳石刻第一篇论文。"
+      ],
+      "contributions": [
+        "发现“资阳人”头骨化石",
+        "首篇安岳石刻研究论文"
+      ],
+      "works": [
+        "《大足安岳的石窟艺术》（1953）"
+      ],
+      "places": [
+        {
+          "type": "memorial",
+          "name": "“资阳人”化石发现地（黄鳝溪）",
+          "city": "资阳",
+          "lat": 30.1222,
+          "lng": 104.628,
+          "note": "1951 年在资阳县城西门外黄鳝溪大桥桥基发现人类头盖骨化石。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "江陵",
+          "city": "荆州",
+          "lat": 30.35,
+          "lng": 112.417,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：张圣奘",
+          "url": "https://zh.wikipedia.org/wiki/張聖奘"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "zhang-xiaolou",
+      "name": "张小楼",
+      "alias": "名柟，字小𫷹（小楼、筱楼）",
+      "life": "1877—1950",
+      "born": "江苏江阴",
+      "role": "teacher",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "书法篆刻"
+      ],
+      "relation": "曾任教于上海美术专科学校。",
+      "relationShort": "曾任教",
+      "bio": [
+        "张小楼是近代文人、书画家。清末与李叔同、袁希濂、许幻园、蔡小香结为“天涯五友”，1900 年发起成立“海上书画公会”并任会长。后留学日本法政大学，民国时任北洋政府外交部编译员、驻朝鲜新义州领事等，1926 年回上海任上海铁路税务局局长，并曾任教于上海美专。其女张曼筠为李公朴夫人。"
+      ],
+      "contributions": [
+        "海上书画公会会长",
+        "“天涯五友”之一"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "江阴",
+          "city": "无锡江阴",
+          "lat": 31.91,
+          "lng": 120.285,
+          "note": "出生地。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：张小𫷹",
+          "url": "https://zh.wikipedia.org/wiki/張小廔"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目未载在上海美专任教的年份与课程。"
+    },
+    {
+      "id": "ma-gongyu",
+      "name": "马公愚",
+      "alias": "本名范，晚号冷翁",
+      "life": "1890—1969",
+      "born": "浙江永嘉（温州）",
+      "role": "teacher",
+      "schoolYear": 1924,
+      "fields": [
+        "国画",
+        "书法篆刻",
+        "工艺设计"
+      ],
+      "relation": "1924 年赴上海，先后任上海中学教员、上海美专教授等职。",
+      "relationShort": "1924 年后任教授",
+      "bio": [
+        "马公愚是画家、书法家、篆刻家。1914 年在温州创设东瓯美术会，1924 年赴上海任上海美专教授等职，1929 年与郑曼青、马孟容等创办中国艺术专科学校并任书法教授，同年任第一次全国美术展览委员。1933 年作品参加柏林“中德美术展览”。著有《书法史》《书法讲话》《应用图案》等。"
+      ],
+      "contributions": [
+        "创设东瓯美术会",
+        "书法教育与书法史著述"
+      ],
+      "works": [
+        "《书法史》",
+        "《书法讲话》",
+        "《应用图案》"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "温州",
+          "city": "温州",
+          "lat": 28.0,
+          "lng": 120.672,
+          "note": "籍贯永嘉；1914 年在此创设东瓯美术会；遗体归葬温州。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "维基百科：马公愚",
+          "url": "https://zh.wikipedia.org/wiki/马公愚"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "wei-xiyan",
+      "name": "魏惜言",
+      "life": "1904—1986",
+      "born": "陕西咸阳",
+      "role": "founder",
+      "schoolYear": null,
+      "fields": [
+        "美术教育",
+        "外交政务"
+      ],
+      "relation": "北平师范大学毕业后，先后出任陕西省立第一中学校长及上海美术专科学校校长。",
+      "relationShort": "曾任校长（据维基条目）",
+      "bio": [
+        "魏惜言是军事将领、教育家、政治人物。北平师范大学英文系毕业后从事教育，九一八事变后转入军旅，陆军大学第十二期毕业，抗战中任第二十七军及骑兵第四军中将参谋长。1949 年任江阴县长，来台后递补为第一届立法委员。"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "咸阳",
+          "city": "咸阳",
+          "lat": 34.3296,
+          "lng": 108.7093,
+          "note": "籍贯。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/wei-xiyan.jpg",
+        "caption": "肖像",
+        "credit": "立法院立法委員名鑑指導委員會, 民42 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:%E9%AD%8F%E6%83%9C%E8%A8%80.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：魏惜言",
+          "url": "https://zh.wikipedia.org/wiki/魏惜言"
+        }
+      ],
+      "status": "partial",
+      "notes": "维基条目载其曾任上海美术专科学校校长，但未载任期；上海美专长期由刘海粟任校长，此职务性质（如代理或分校）待档案复核。"
+    },
+    {
+      "id": "xu-xinliu",
+      "name": "徐新六",
+      "alias": "字振飞",
+      "life": "1890—1938",
+      "born": "浙江杭州（祖籍余杭）",
+      "role": "trustee",
+      "schoolYear": 1932,
+      "fields": [
+        "外交政务"
+      ],
+      "relation": "1932 年 1 月至 1937 年 6 月任上海美专校董会校董。",
+      "relationShort": "1932—1937 年校董",
+      "bio": [
+        "徐新六是企业家、银行家。留学英国、法国，1925 年起任浙江兴业银行常务董事兼总经理；历任上海公共租界工部局华人董事、复旦大学校董、中华教育文化基金董事等职。1938 年 8 月搭乘的“桂林号”客机被日军击落，遇难身亡，国民政府授予烈士称号。"
+      ],
+      "contributions": [
+        "上海美专校董（1932—1937）",
+        "近代金融家"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "杭州",
+          "city": "杭州",
+          "lat": 30.2741,
+          "lng": 120.1551,
+          "note": "出生地。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "photo": {
+        "src": "images/people/xu-xinliu.jpg",
+        "caption": "肖像",
+        "credit": "佚名 · Public domain · Wikimedia Commons",
+        "page": "https://commons.wikimedia.org/wiki/File:Xu_Xinliu.jpg"
+      },
+      "sources": [
+        {
+          "title": "维基百科：徐新六",
+          "url": "https://zh.wikipedia.org/wiki/徐新六"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。"
+    },
+    {
+      "id": "qiu-ti",
+      "name": "丘堤",
+      "alias": "原名丘碧珍",
+      "life": "1906—1958",
+      "born": "福建霞浦",
+      "gender": "female",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "油画"
+      ],
+      "relation": "入上海美专西画系，1928 年毕业后赴日本留学；1929 年底回上海任上海美专油画系研究员。",
+      "relationShort": "1928 年毕业，后任油画系研究员",
+      "bio": [
+        "丘堤是现代主义油画家，是 1930 年代前卫艺术团体“决澜社”唯一的女性成员。1928 年自上海美专毕业后赴东京学习，1930 年回国后将后印象派技法与个人风格结合。1933 年起参加决澜社第二、第三届展览，至 1934 年已有三家上海大型杂志刊登其作品照片。后与决澜社创始人庞薰琹结为伴侣。"
+      ],
+      "contributions": [
+        "决澜社唯一女性成员",
+        "中国早期女性现代主义油画家"
+      ],
+      "places": [
+        {
+          "type": "hometown",
+          "name": "霞浦",
+          "city": "宁德霞浦",
+          "lat": 26.8857,
+          "lng": 120.005,
+          "note": "出生地。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia (English): Qiu Ti",
+          "url": "https://en.wikipedia.org/wiki/Qiu_Ti"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。英文条目称 Shanghai Art Academy，即上海美专。"
+    },
+    {
+      "id": "chen-renhao",
+      "name": "陈人浩",
+      "alias": "Chen Jen Hao",
+      "life": "1908—1976",
+      "born": "福建福州",
+      "role": "both",
+      "schoolYear": 1926,
+      "fields": [
+        "油画",
+        "美术教育"
+      ],
+      "relation": "1926 年入上海美专学习，与刘抗结识；留法期间作品入选秋季沙龙，校长刘海粟邀其回校任教，1933 年任上海美专教授。",
+      "relationShort": "1926 年入学，1933 年任教授",
+      "bio": [
+        "陈人浩是新加坡美术先驱与教育家。1928 至 1932 年在巴黎美术学院学习，作品入选秋季沙龙。1937 年后避居马来亚，任麻坡中化中学教师、校长；1959 年起任新加坡加冷西政府华文中学（后迁德明路并更名德明政府华文中学）校长，并曾任教南洋美术专科学校。1970 年获新加坡公共行政奖章（银）。"
+      ],
+      "contributions": [
+        "新加坡与马来亚华文教育及美术先驱",
+        "南洋美专教师"
+      ],
+      "places": [
+        {
+          "type": "institution",
+          "name": "德明政府中学（原德明政府华文中学）",
+          "city": "新加坡",
+          "lat": 1.3047,
+          "lng": 103.892,
+          "note": "1959 年起任校长直至 1969 年退休。",
+          "approx": true,
+          "primary": true
+        },
+        {
+          "type": "institution",
+          "name": "麻坡中化中学",
+          "city": "马来西亚麻坡",
+          "lat": 1.958,
+          "lng": 102.577,
+          "note": "1937 年后任教，二战后任校长。",
+          "approx": true
+        },
+        {
+          "type": "hometown",
+          "name": "福州",
+          "city": "福州",
+          "lat": 26.0745,
+          "lng": 119.2965,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia (English): Chen Jen Hao",
+          "url": "https://en.wikipedia.org/wiki/Chen_Jen_Hao"
+        }
+      ],
+      "status": "verified",
+      "notes": "本条目依据所列维基百科条目整理，未作推测；坐标为城市级近似位置的已标注。英文条目称 Shanghai College of Fine Arts。"
+    },
+    {
+      "id": "cai-hongzhong",
+      "name": "蔡洪钟",
+      "alias": "Tsai Horng Chung",
+      "life": "1915—2003",
+      "born": "中国",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "油画",
+        "美术教育",
+        "音乐"
+      ],
+      "relation": "1940 年代初就读上海美专（英文条目称 Shanghai Art Academy），同期同学有 Chen Shi Fatt 等。",
+      "relationShort": "1940 年代初就读",
+      "bio": [
+        "蔡洪钟是砂拉越华人画家与美术教育者。1943 年底赴日占时期的砂拉越任美术教师，此后终生定居当地，深刻影响砂拉越艺术生活，在东南亚享有声誉。兼擅中国传统与西方现代画风，亦为诗人、作曲家，作品《Ocean Wave》1953 年于香港出版。2005 年马来西亚国家美术馆为其举办回顾展“Rediscovering Tsai Horng Chung”。"
+      ],
+      "contributions": [
+        "砂拉越现代美术教育先驱"
+      ],
+      "places": [
+        {
+          "type": "residence",
+          "name": "古晋（砂拉越）",
+          "city": "马来西亚古晋",
+          "lat": 1.5535,
+          "lng": 110.3593,
+          "note": "1943 年底赴砂拉越任美术教师并终生定居。",
+          "approx": true,
+          "primary": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia (English): Tsai Horng Chung",
+          "url": "https://en.wikipedia.org/wiki/Tsai_Horng_Chung"
+        }
+      ],
+      "status": "partial",
+      "notes": "英文条目未载具体入学年份与籍贯城市；同学 Chen Shi Fatt 的中文名待考。"
+    },
+    {
+      "id": "xu-jiaguang",
+      "name": "许家光",
+      "alias": "Ka Kwong Hui",
+      "life": "1922—2003",
+      "born": "广东广州",
+      "role": "student",
+      "schoolYear": null,
+      "fields": [
+        "雕塑",
+        "工艺设计",
+        "美术教育"
+      ],
+      "relation": "曾就读上海美专（英文条目称 Shanghai Academy of Fine Arts, SAFA）及广东艺术学校。",
+      "relationShort": "曾就读",
+      "bio": [
+        "许家光是华裔美国陶艺家与教育家，作品融合中美风格并涉足波普艺术。1948 年赴美，1951、1952 年获阿尔弗雷德大学学士、硕士学位，后任布鲁克林博物馆艺术学校陶瓷系主任，并任教于罗格斯大学道格拉斯学院。1964—1965 年与波普艺术家罗伊·利希滕斯坦合作陶瓷系列。作品藏于布鲁克林博物馆、埃弗森美术馆、纽瓦克博物馆等。"
+      ],
+      "contributions": [
+        "华裔美国陶艺先驱",
+        "与利希滕斯坦合作波普陶瓷"
+      ],
+      "places": [
+        {
+          "type": "collection",
+          "name": "布鲁克林博物馆",
+          "city": "纽约",
+          "lat": 40.6712,
+          "lng": -73.9636,
+          "note": "藏有其作品；曾任该馆艺术学校陶瓷系主任。",
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "广州",
+          "city": "广州",
+          "lat": 23.1291,
+          "lng": 113.2644,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia (English): Ka Kwong Hui",
+          "url": "https://en.wikipedia.org/wiki/Ka_Kwong_Hui"
+        }
+      ],
+      "status": "partial",
+      "notes": "英文条目未载在上海美专的年份；SAFA 对应上海美专系依该条目所注，请复核中文名写法。"
+    },
+    {
+      "id": "zheng-manqing",
+      "name": "郑曼青",
+      "alias": "Cheng Man-ch'ing",
+      "life": "1902—1975",
+      "born": "浙江永嘉（温州）",
+      "role": "teacher",
+      "schoolYear": null,
+      "fields": [
+        "国画",
+        "书法篆刻"
+      ],
+      "relation": "在刘海粟主持的上海美专任国画系主任，约 1930 年离开，与黄宾虹等创办 College of Chinese Culture and Art（英文条目名称）。",
+      "relationShort": "曾任国画系主任",
+      "bio": [
+        "郑曼青兼擅诗、书、画、中医与太极拳，人称“五绝老人”。早年随汪香禅学画，经蔡元培介绍赴上海，结识吴昌硕、徐悲鸿、张大千等。1949 年赴台湾，1950 年出版《郑子太极拳十三篇》（英文条目所载 Cheng's 13 Chapters of Tai Chi Boxing），1964 年移居美国，在纽约传授太极拳，为最早在美国公开教授太极拳的中国名家之一。逝世后台北故宫博物院为其举办回顾展；纽约美国华人博物馆藏有其档案。"
+      ],
+      "contributions": [
+        "上海美专国画系主任",
+        "将太极拳传播至美国"
+      ],
+      "places": [
+        {
+          "type": "collection",
+          "name": "美国华人博物馆（郑曼青档案）",
+          "city": "纽约",
+          "lat": 40.7194,
+          "lng": -73.999,
+          "address": "215 Centre St",
+          "note": "英文维基条目载该馆收藏郑曼青档案。",
+          "primary": true
+        },
+        {
+          "type": "hometown",
+          "name": "永嘉（温州）",
+          "city": "温州",
+          "lat": 28.0,
+          "lng": 120.672,
+          "note": "出生地。",
+          "approx": true
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia (English): Cheng Man-ch'ing",
+          "url": "https://en.wikipedia.org/wiki/Cheng_Man-ch'ing"
+        }
+      ],
+      "status": "partial",
+      "notes": "英文条目称 Shanghai College of Art（由刘海粟主持）；任职年份未载，赴美年份等细节以原条目为准。"
     }
   ]
 };
