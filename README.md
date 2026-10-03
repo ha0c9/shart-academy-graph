@@ -81,6 +81,9 @@ GitHub Pages 是纯静态托管，不能保存密钥，因此 AI 调用放在 Gi
 | Variable | `AI_BASE_URL` | OpenAI 兼容接口地址，如 `https://api.deepseek.com`（脚本自动补 `/chat/completions`） |
 | Variable | `AI_MODEL_PLANNER` | 模型名，如 `deepseek-chat` |
 | Variable（可选） | `SITE_URL` | 站点地址，默认 `https://<owner>.github.io/<repo>/` |
+| Variable（可选） | `AI_MAX_TOKENS` | 单次输出上限，默认 16384；接口不接受时自动降为 8192 |
+
+模型输出被截断时脚本会请模型接着输出；JSON 格式有小错误（字符串里的英文引号、多余或缺失的逗号、结尾未闭合）会自动修复，仍不合法则带着错误信息让模型重写，最多 3 次。仍失败时，模型原始输出会作为该次运行的 Artifacts 上传，Issue 中的失败通知会写明具体原因。
 
 为避免他人消耗额度，只有仓库所有者、组织成员和协作者（OWNER / MEMBER / COLLABORATOR）创建的 Issue 或评论会触发模型调用。也可在 Actions 页手动运行 “AI 策展” 工作流并直接填写需求。若模型不支持工具调用，脚本会自动改为“预先检索相关人物资料再生成”的模式。
 
