@@ -489,11 +489,11 @@
     document.body.appendChild(a); a.click(); a.remove();
   }
   function exportCsv() {
-    var head = ['姓名', '别名/备注', '生卒', '籍贯', '身份', '与上海美专的关系', '领域', '主要贡献', '代表作品', '地点类型', '地点名称', '城市', '地址', '纬度(WGS84)', '经度(WGS84)', '近似坐标', '地点说明', '核实状态', '参考来源'];
+    var head = ['姓名', '别名/备注', '生卒', '籍贯', '性别', '身份', '与上海美专的关系', '领域', '主要贡献', '代表作品', '地点类型', '地点名称', '城市', '地址', '纬度(WGS84)', '经度(WGS84)', '近似坐标', '地点说明', '核实状态', '参考来源'];
     var rows = [head];
     people.forEach(function (p) {
       (p.places || [{}]).forEach(function (pl) {
-        rows.push([p.name, p.alias || '', p.life || '', p.born || '', ROLES[p.role].label, p.relation || '', (p.fields || []).join('、'),
+        rows.push([p.name, p.alias || '', p.life || '', p.born || '', p.gender === 'female' ? '女' : '', ROLES[p.role].label, p.relation || '', (p.fields || []).join('、'),
           (p.contributions || []).join('；'), (p.works || []).join('；'), (PLACE_TYPES[pl.type] || {}).label || '', pl.name || '', pl.city || '',
           pl.address || '', pl.lat == null ? '' : pl.lat, pl.lng == null ? '' : pl.lng, pl.approx ? '是' : '', pl.note || '', STATUS[p.status] || '',
           (p.sources || []).map(function (s) { return s.title + (s.url ? ' ' + s.url : ''); }).join('；')]);
@@ -540,7 +540,8 @@
       '<p>当前收录 <b>' + people.length + '</b> 位人物、<b>' + nPlaces + '</b> 个地点。其中“已核实” ' + (counts.verified || 0) + ' 人，“部分核实” ' + (counts.partial || 0) + ' 人，“待核实” ' + (counts.pending || 0) + ' 人。</p>' +
       '<h3>使用方法</h3><ul>' +
       '<li><b>地图</b>：点击标记弹出摘要，点击“查看详情”或左侧名单可打开完整资料（照片、生平、年表、贡献、作品、地点、来源）。大标记为主要贡献地，小标记为其他相关地点；聚合圆圈表示该区域有多个地点，点击可展开。</li>' +
-      '<li><b>筛选</b>：左侧可按“与美专关系”“艺术领域”“地点类型”多选组合筛选，或输入姓名、地名、作品关键词搜索（多个关键词以空格分隔）。</li>' +
+      '<li><b>筛选</b>：左侧可按“与美专关系”（创办人·校长、校董、教师、校友）“女性”“艺术领域”“地点类型”多选组合筛选，或输入姓名、地名、作品关键词搜索（多个关键词以空格分隔）。</li>' +
+      '<li><b>AI 策展</b>：在“AI策展”页写下策展想法，系统会在 GitHub 上创建一个策展请求，由 GitHub Actions 调用仓库配置的大模型，基于本图谱资料（必要时联网检索）生成结构化策展方案（展览结构、展品清单、借展方案与借展地图、日程、风险与资料缺口），完成后自动发布到本站。</li>' +
       '<li><b>名录</b>：表格形式浏览全部人物，可点击表头排序，并可导出 CSV（每个地点一行，含 WGS-84 坐标，可直接导入 Excel / GIS）或 JSON。</li>' +
       '<li><b>坐标精度</b>：标有“近似坐标”的地点（多为故里、城市级地点）仅示意其所在城市或街区，并非精确门牌位置；精确定位请以馆方公布的地址为准。</li>' +
       '<li><b>引用</b>：详情页可复制本条永久链接（形如 <code>#p=chen-shuliang</code>）与引用信息。</li>' +
@@ -548,6 +549,7 @@
       '<h3>资料说明与核实状态</h3>' +
       '<p class="note">本图谱资料综合自维基百科、各地博物馆/纪念馆公开信息及相关研究文献，并结合 AI 整理。<b>“已核实”</b>表示人物与上海美专的关系及主要地点已与公开来源逐条对照；<b>“部分核实”</b>表示主要事实有来源，但个别细节（如具体年份、馆址）仍需以档案或馆方资料复核；<b>“待核实”</b>表示仅有零散来源，使用前请务必复核。人物与上海美专的关系（学生/教师）、入学与毕业年份等在不同文献中常有出入，正式引用前请以一手档案为准。</p>' +
       '<h3>图片版权</h3><p>人物照片与作品图片主要来自维基共享资源（Wikimedia Commons），已下载至本站以便国内访问，作者与授权信息见各条目“参考来源”。未找到合适开放授权图片的人物以姓氏字符占位，欢迎补充。</p>' +
+      '<h3>资料归档</h3><p>全部人物的详细资料已归档在站点 <a href="archive/README.md" target="_blank" rel="noopener"><code>archive/</code></a> 目录，便于 AI 整理与抓取：<code>archive/people.jsonl</code>（每行一位人物，含结构化字段与来源原文）、<code>archive/people/&lt;id&gt;.md</code>（每人一份 Markdown 档案）、<code>archive/index.json</code>（索引）；站点根目录的 <a href="llms.txt" target="_blank" rel="noopener"><code>llms.txt</code></a> 说明了各数据文件的用途。维基百科原文按 CC BY-SA 4.0 授权转载并注明版本链接。</p>' +
       '<h3>补充与纠错</h3><p>全部数据位于仓库 <code>data/people.js</code>，结构清晰、可直接编辑。补充人物时请复制任一条目，填写 <code>places</code>（地点，含 WGS-84 经纬度）与 <code>sources</code>（来源），并标注 <code>status</code> 核实状态。照片可放入 <code>images/people/</code> 目录后在 <code>photo.src</code> 中引用。</p>';
   }
 
