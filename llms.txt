@@ -1,0 +1,27 @@
+# 上海美专名人图谱 (Shanghai Art School Notable Figures Atlas)
+
+> 上海美术专科学校（1912—1952，刘海粟等创办）创办人、校董、教师与校友的地图式资料库。每位人物含与上海美专的关系、生平、年表、贡献、作品、相关地点（WGS-84 坐标）、来源原文摘录与维基百科条目全文。
+
+站点：https://ha0c9.github.io/shart-academy-graph/
+仓库：https://github.com/ha0c9/shart-academy-graph
+
+## 机器可读数据
+
+- [archive/index.json](archive/index.json)：全部人物索引（id、姓名、生卒、身份、性别、领域、与美专关系、归档文件路径）
+- [archive/people.jsonl](archive/people.jsonl)：每行一位人物的完整记录（结构化字段 + quotes 来源原文句子 + full_text 维基百科全文 + wikipedia 修订信息）
+- [archive/people/](archive/people/)：每位人物一份 Markdown（YAML 头信息 + 正文 + 维基百科全文附录），文件名为 `<id>.md`
+- [data/people.js](data/people.js)：网站使用的人物数据（`window.SHART_DATA = {...}`，花括号内为严格 JSON）
+- [data/history.js](data/history.js)：校史、沿革与校址（严格 JSON）
+- [curations/index.json](curations/index.json)：AI 策展方案列表；方案全文见 `curations/<slug>.json` 与 `.md`
+
+## 字段要点
+
+- role：founder 创办人/校长，trustee 校董，teacher 教师，both 校友兼教师，student 校友
+- status：verified 已核实，partial 部分核实（备注见 notes），pending 待核实
+- places[].type：memorial 纪念馆/美术馆，collection 作品收藏/陈列，institution 任职机构，residence 故居，hometown 故里，tomb 墓园；approx=true 表示城市级近似坐标
+
+## 使用说明
+
+- 人物与上海美专的关系均有来源；quotes 字段给出来源中的原句，引用时请核对。
+- 维基百科文本依 CC BY-SA 4.0 授权，转用时须署名并以相同方式共享。
+- 收录范围为刘海粟时期的上海美专（1912—1952），不含 1959 年后的上海市美术专科学校。
