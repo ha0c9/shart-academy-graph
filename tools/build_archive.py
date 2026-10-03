@@ -20,7 +20,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARCH = os.path.join(ROOT, 'archive')
 UA = 'ShanghaiArtSchoolAtlas-Archive/1.0 (+https://github.com/ha0c9/shart-academy-graph)'
-SCHOOL_RE = re.compile(r'上海美术专科学校|上海美專|上海美专|上海图画美术院|上海图画美术学校|上海美术专门学校|上海美术学校|上海美术院|刘海粟')
+SCHOOL_RE = re.compile(r'上海美术专科学校|上海美專|上海美专|上海图画美术院|上海图画美术学校|上海美术专门学校|上海美术学校|上海美术院|刘海粟|'
+                       r'Shanghai (?:College|Academy|School|Institute) of (?:Fine )?Arts?|Shanghai Art Academy|Liu Haisu')
 ROLE_LABEL = {'founder': '创办人/校长', 'trustee': '校董', 'teacher': '教师', 'both': '校友兼教师', 'student': '校友'}
 PLACE_LABEL = {'memorial': '纪念馆/美术馆', 'collection': '作品收藏/陈列', 'institution': '任职机构',
                'residence': '故居', 'hometown': '故里', 'tomb': '墓园'}
@@ -65,7 +66,7 @@ def fetch_wiki(lang, title):
 
 def quotes(text):
     out = []
-    for sent in re.split(r'(?<=[。！？；])', text.replace('\n', ' ')):
+    for sent in re.split(r'(?<=[。！？；])|(?<=[.!?])\s+', text.replace('\n', ' ')):
         sent = sent.strip()
         if SCHOOL_RE.search(sent) and 6 < len(sent) < 400 and sent not in out:
             out.append(sent)
