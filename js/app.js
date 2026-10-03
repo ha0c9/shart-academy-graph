@@ -6,11 +6,12 @@
 
   var ROLES = {
     founder: { label: '创办人·校长', color: '#b7791f' },
+    trustee: { label: '校董', color: '#2f6b5f' },
     teacher: { label: '教师', color: '#1f5f8b' },
     both: { label: '校友兼教师', color: '#6b3fa0' },
     student: { label: '校友', color: '#a3271f' }
   };
-  var ROLE_ORDER = ['founder', 'teacher', 'both', 'student'];
+  var ROLE_ORDER = ['founder', 'trustee', 'teacher', 'both', 'student'];
 
   var PLACE_TYPES = {
     memorial: { label: '纪念馆·美术馆', color: '#a3271f' },
@@ -41,7 +42,7 @@
   });
 
   var state = {
-    roles: {}, fields: {}, placeTypes: {},
+    roles: {}, fields: {}, placeTypes: {}, tags: {},
     q: '', onlyPrimary: false, sort: 'year',
     gcj: true, current: null
   };
@@ -72,6 +73,7 @@
   // ---------------- 过滤 ----------------
   function personMatches(p) {
     if (anyOn(state.roles) && !state.roles[p.role]) return false;
+    if (state.tags.female && p.gender !== 'female') return false;
     if (anyOn(state.fields) && !(p.fields || []).some(function (f) { return state.fields[f]; })) return false;
     if (state.q) {
       var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -128,6 +130,8 @@
     make($('#filter-field'), Object.keys(fieldCount).sort(function (a, b) { return fieldCount[b] - fieldCount[a]; }).map(function (k) {
       return { key: k, label: k, n: fieldCount[k] };
     }), state.fields);
+    var nFemale = people.filter(function (p) { return p.gender === 'female'; }).length;
+    make($('#filter-tag'), nFemale ? [{ key: 'female', label: '女性', n: nFemale }] : [], state.tags);
     make($('#filter-place'), Object.keys(PLACE_TYPES).filter(function (k) { return placeCount[k]; }).map(function (k) {
       return { key: k, label: PLACE_TYPES[k].label, n: placeCount[k] };
     }), state.placeTypes);
@@ -328,6 +332,7 @@
       '<div class="life">' + esc(p.life || '') + (p.born ? ' · ' + esc(p.born) + '人' : '') + '</div>' +
       (p.alias ? '<div class="alias">' + esc(p.alias) + '</div>' : '') +
       '<div><span class="badge" style="background:' + role.color + '">' + role.label + '</span>' +
+      (p.gender === 'female' ? '<span class="badge field">女性</span>' : '') +
       (p.fields || []).map(function (f) { return '<span class="badge field">' + esc(f) + '</span>'; }).join('') +
       '<span class="badge status-' + p.status + '" title="资料核实状态">' + (STATUS[p.status] || '') + '</span></div>' +
       '</div></div>';
@@ -373,6 +378,7 @@
     h += '<div class="d-actions">' +
       '<button class="btn" data-act="copy">复制本条链接</button>' +
       '<button class="btn ghost" data-act="cite">复制引用信息</button>' +
+      '<a class="btn ghost" target="_blank" rel="noopener" href="archive/people/' + esc(p.id) + '.md" title="结构化资料 + 来源原文 + 维基百科全文">资料归档</a>' +
       '<a class="btn ghost" target="_blank" rel="noopener" href="https://baike.baidu.com/search?word=' + q + '">百度百科</a>' +
       '<a class="btn ghost" target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?search=' + q + '">维基百科</a>' +
       '</div>';
@@ -551,6 +557,7 @@
     document.querySelectorAll('.view').forEach(function (s) { s.classList.toggle('active', s.id === 'view-' + v); });
     if (v === 'map') setTimeout(function () { map.invalidateSize(); }, 0);
     if (v === 'table') renderTable();
+    if (v === 'curation' && !silent) window.ShartCuration.show();
     if (!silent) setHash(v === 'map' ? '' : 'view=' + v);
   }
   var hashLock = false;
@@ -571,11 +578,18 @@
       return;
     }
     if (state.current) closeDetail(true);
-    switchView((m = h.match(/^view=(table|history|about)$/)) ? m[1] : 'map', true);
+    if ((m = h.match(/^c=(.+)$/))) {
+      switchView('curation', true);
+      window.ShartCuration.show(decodeURIComponent(m[1]));
+      return;
+    }
+    var v = (m = h.match(/^view=(table|history|about|curation)$/)) ? m[1] : 'map';
+    switchView(v, true);
+    if (v === 'curation') window.ShartCuration.show();
   }
 
   function refresh() {
-    var nActive = [state.roles, state.fields, state.placeTypes].reduce(function (s, o) {
+    var nActive = [state.roles, state.fields, state.placeTypes, state.tags].reduce(function (s, o) {
       return s + Object.keys(o).filter(function (k) { return o[k]; }).length;
     }, 0) + (state.onlyPrimary ? 1 : 0);
     $('#filter-count').textContent = nActive || '';
@@ -611,6 +625,7 @@
 
   // ---------------- 启动 ----------------
   function init() {
+    window.ShartCuration.init({ esc: esc, byId: byId, avatarHtml: avatarHtml });
     initMap();
     buildChips();
     renderSchools();
